@@ -8,12 +8,16 @@ An entry should be directly useful for studying recursive self-improvement, pers
 
 For systems that claim self-improvement, a contribution must say:
 
-1. **What persists?** Model weights, code, prompts, memory, tools, skills, workflow, or another component.
+1. **What persists?** Model weights, generated data, curriculum, code, prompts, memory, tools, skills, workflow, evaluator, environment, or another component.
 2. **What supplies the signal?** Formal proof, executable verifier, held-out benchmark, environment reward, model judge, or human review.
 3. **What is recursive?** Does the system improve the mechanism that creates later improvements, or only a fixed target component?
 4. **What is the evidence?** Multi-generation results, baselines, artifacts, and limitations.
 
 One-shot answer revision, generic agent frameworks, promotional claims without evaluation, duplicate links, and abandoned toy projects with no distinct technical contribution are normally out of scope.
+
+### Data and dataset evolution
+
+Data-centric work is in scope when the system generates, selects, filters, repairs, or reorganizes experience and the resulting dataset is consumed by a later training or decision round. State the producer, selection signal, consumer, and whether this cycle repeats. Static synthetic datasets, ordinary augmentation, and benchmark releases remain useful only as `Enabler` entries unless they participate in such a closed loop.
 
 ## Pull requests
 
