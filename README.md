@@ -65,7 +65,7 @@ The unit of analysis is the **deployed agent system**, not only its neural weigh
 - [`RSI` Gödel Agent](https://arxiv.org/abs/2410.04444) (ACL 2025) - A self-referential LLM agent that edits its own logic rather than following a fixed hand-authored optimizer. [Code](https://github.com/Arvid-pku/Godel_Agent)
 - [`RSI` Darwin Gödel Machine](https://arxiv.org/abs/2505.22954) (2025) - Open-ended evolution of coding agents through self-modification, empirical evaluation, and an archive of variants. [Code](https://github.com/jennyzzt/dgm)
 - [`RSI` A Self-Improving Coding Agent (SICA)](https://arxiv.org/abs/2504.15228) (2025) - A coding agent repeatedly edits and benchmarks its own codebase. [Code](https://github.com/MaximeRobeyns/self_improving_coding_agent)
-- [`Self-improvement` OpenRSI / Frontis-MA1](https://arxiv.org/abs/2607.28568) (2026) - An executable AI4AI stack joining learned improvement operators, long-horizon program evolution, and held-out transfer evaluation. [Code](https://github.com/FrontisAI/OpenRSI)
+- [`Self-improvement` OpenRSI / OpenMLE / Frontis-MA1](https://arxiv.org/abs/2607.28568) (2026) - A full-stack AI4AI release from Horizon Research, Frontis.AI, and Tsinghua University, joining executable task environments, learned improvement operators, long-horizon program evolution, and held-out transfer evaluation. [Code](https://github.com/FrontisAI/OpenRSI)
 - [`Enabler` Diving into Reliable Self-Evolving Agents](https://openreview.net/forum?id=CGO1hDTHNe) (2026) - A five-level taxonomy separating output, model, scaffold, improver, and criterion evolution, with reliability requirements for each level. [Collection](https://github.com/wkqdzkd/Awesome-Reliable-Self-Evolving-Agents)
 
 ## Surveys and taxonomies
@@ -114,7 +114,7 @@ The unit of analysis is the **deployed agent system**, not only its neural weigh
 | 2026 | [MOSS](https://arxiv.org/abs/2605.22794) · [Code](https://github.com/hkgai-official/Moss) | `RSI` | An agent rewrites its TypeScript source, replays failure batches, and promotes container images through an approval and rollback gate. |
 | 2026 | [EvoTrainer](https://arxiv.org/abs/2606.03108) · [Code](https://github.com/AlibabaResearch/DAMO-ConvAI/tree/main/EvoTrainer) | `RSI` | Model policies and their training harnesses co-evolve under executable feedback. |
 | 2026 | [SIA: Self Improving AI with Harness & Weight Updates](https://arxiv.org/abs/2605.27276) · [Code](https://github.com/hexo-ai/sia) | `Self-improvement` | A meta-agent updates both task harnesses and model weights under benchmark feedback. |
-| 2026 | [Frontis-MA1 / OpenRSI](https://arxiv.org/abs/2607.28568) · [Code](https://github.com/FrontisAI/OpenRSI) | `Self-improvement` | Learned program-improvement operators and evolutionary search are joined in an executable MLE research stack. |
+| 2026 | [OpenRSI / OpenMLE / Frontis-MA1](https://arxiv.org/abs/2607.28568) · [Code](https://github.com/FrontisAI/OpenRSI) | `Self-improvement` | The Tsinghua-affiliated release joins OpenMLE-Gym, OpenMLE-RL, Frontis-MA1, and OpenMLE-Evo in an executable MLE research stack. |
 
 ## Components of self-improvement
 
@@ -174,7 +174,7 @@ Automating AI R&D can close an important part of the RSI loop, but these systems
 - [`Enabler` AlphaEvolve](https://arxiv.org/abs/2506.13131) (2025) - Evolutionary coding agent for algorithmic and scientific discovery; it improves target programs, not itself.
 - [`Enabler` autoresearch](https://github.com/karpathy/autoresearch) (2026) - A minimal edit–train–measure–keep loop for autonomous ML experiments.
 - [`Self-improvement` A-Evolve](https://arxiv.org/abs/2602.00359) (2026) - General infrastructure for applying interchangeable evolution algorithms to agents across domains. [Code](https://github.com/A-EVO-Lab/a-evolve)
-- [`Self-improvement` OpenRSI](https://arxiv.org/abs/2607.28568) (2026) - Trains reusable AI4AI operators and composes them into long-horizon machine-learning engineering search. [Code](https://github.com/FrontisAI/OpenRSI)
+- [`Self-improvement` OpenRSI / OpenMLE](https://arxiv.org/abs/2607.28568) (2026) - The Tsinghua-affiliated stack trains reusable AI4AI operators and composes them into long-horizon machine-learning engineering search. It releases task and execution infrastructure, training code and data, model weights, and evolutionary search. [Code](https://github.com/FrontisAI/OpenRSI)
 
 ## Software-engineering self-improvement
 
@@ -282,7 +282,7 @@ These systems can alter multiple parts of an agent or its harness, not just the 
 | [GEA](https://github.com/UCSB-AI/GEA) | Agent variants and shared experience | Benchmark selection | [Paper](https://arxiv.org/abs/2602.04837) |
 | [Yunjue Agent](https://github.com/YunjueTech/Yunjue-Agent) | Executable tools and their versions | Binary execution feedback | [Paper](https://arxiv.org/abs/2601.18226) |
 | [CORAL](https://github.com/Human-Agent-Society/CORAL) | Agent organizations, shared skills, attempts, and policies | Grader-scored commits | [Paper](https://arxiv.org/abs/2604.01658) |
-| [OpenRSI](https://github.com/FrontisAI/OpenRSI) | Improvement operators, programs, and model weights | Held-out transfer evaluation | [Paper](https://arxiv.org/abs/2607.28568) |
+| [OpenRSI / OpenMLE](https://github.com/FrontisAI/OpenRSI) | Executable tasks, SFT/RL operators, programs, model weights, and evolutionary search | Execution feedback + held-out transfer evaluation | [Frontis-MA1 paper](https://arxiv.org/abs/2607.28568) |
 | [A-Evolve](https://github.com/A-EVO-Lab/a-evolve) | Agent programs and evolutionary strategy configuration | Pluggable evaluators + archive | [Paper](https://arxiv.org/abs/2602.00359) |
 | [Exo](https://github.com/exoharness/exo) | Prompts, memory, tools, policy, harness code | Immutable event history; experimental | Recursive harness runtime |
 | [Yoyo Evolve](https://github.com/yologdev/yoyo-evolve) | Its own Rust source | Tests + scheduled promotion | Public GitHub evolution history |
