@@ -191,20 +191,47 @@ Coding is a particularly important test bed because repositories, tests, and iss
 
 ## Evaluation and benchmarks
 
-- [SWE-bench](https://arxiv.org/abs/2310.06770) - Real-world GitHub issue resolution; frequently used to measure coding-agent descendants. [Code](https://github.com/SWE-bench/SWE-bench)
+A downstream task score is not by itself an RSI evaluation. Direct benchmarks below measure change across episodes, generations, or checkpoints; task environments provide the external work and verifiers on which an improvement loop can be tested.
+
+### Direct self-improvement and longitudinal evaluation
+
+- [RSIBench-Data](https://arxiv.org/abs/2607.25886) (2026) - Opens only the data-generation strategy while holding the target model, training stack, evaluator, and budgets fixed. Agents synthesize data, train checkpoints, inspect execution feedback, and select a final candidate across six downstream benchmarks. [Code](https://github.com/evolvent-ai/RSIBench-Data) · [Project](https://rsibench.co/)
+- [PAST-Bench](https://arxiv.org/abs/2608.04003) (2026) - Uses matched persistence-on/off conditions across ordered fresh-session tasks to attribute later gains to saved experience and its intended retrieval or update pathway. [Code](https://github.com/Gen-Verse/PAST-Bench)
+- [EvoAgentBench](https://arxiv.org/abs/2607.05202) (2026) - Measures whether trace-derived procedural abilities transfer to held-out tasks across web research, algorithmic reasoning, software engineering, and knowledge work. [Code](https://github.com/EverMind-AI/EvoAgentBench) · [Dataset](https://huggingface.co/datasets/EverMind-AI/EvoAgentBench)
+- [SIP-Bench](https://github.com/Yuchong-W/SIP_Bench) (2026) - An adapter-based protocol that converts task benchmarks into longitudinal evaluations with `T0/T1/T2` checkpoints, replay/adapt/held-out/drift splits, retention, stability, and cost metrics.
+- [SEAGym](https://arxiv.org/abs/2606.17546) (2026) - Converts Harbor-compatible tasks into train, frozen validation, held-out in- and out-of-distribution, replay, and cost views for evaluating harness updates. [Code](https://github.com/antropy-research/SEAGym)
+- [SEA-Eval](https://arxiv.org/abs/2604.08988) (2026) - Uses sequential task streams and success-rate/token-consumption trajectories to measure evolutionary gain and stability beyond isolated episodic scores. Code not linked by the paper.
+- [SE-Bench](https://arxiv.org/abs/2602.04811) (2026) - Measures whether an agent internalizes new API knowledge and later applies it without documentation access. [Code](https://github.com/thunlp/SE-Bench)
+- [LifelongAgentBench](https://arxiv.org/abs/2505.11942) (2025) - Tests experience accumulation and transfer through interdependent database, operating-system, and knowledge-graph tasks. [Code](https://github.com/caixd-220529/LifelongAgentBench)
+- [StuLife](https://arxiv.org/abs/2508.19005) (2025) - A persistent virtual-campus environment for evaluating long-term memory, reusable skills, adaptation, and self-directed behavior across an academic-year task stream. [Code](https://github.com/ECNU-ICALK/ELL-StuLife)
+- [FinEvolveBench](https://arxiv.org/abs/2606.06960) (2026) - Tests whether agents turn low-repetition financial tasks and delayed, noisy outcomes into reusable experience. [Code and data preview](https://github.com/DavidDeng01/FinEvolveBench); the repository schedules the complete dataset for September 2026.
+- [FinEvo-Bench](https://arxiv.org/abs/2608.06144) (2026) - Uses paired non-evolving controls and shuffled longitudinal streams to measure experience gains and compliance in professional financial workflows. Code not linked by the paper.
+
+### AI research and iterative optimization environments
+
 - [MLAgentBench](https://arxiv.org/abs/2310.03302) - ML experimentation tasks with execution-based evaluation. [Code](https://github.com/snap-stanford/MLAgentBench)
 - [MLE-bench](https://arxiv.org/abs/2410.07095) - 75 Kaggle competitions for measuring ML-engineering agents. [Code](https://github.com/openai/mle-bench)
 - [RE-Bench](https://arxiv.org/abs/2411.15114) - Open-ended AI R&D environments with direct human-expert comparisons. [Code](https://github.com/METR/RE-Bench)
+- [ResearchGym](https://arxiv.org/abs/2602.15112) - End-to-end AI research tasks with solution methods withheld, fixed budgets, executable experiments, and human baselines. [Code](https://github.com/Anikethh/ResearchGym)
+- [MLGym-Bench](https://arxiv.org/abs/2502.14499) - Open-ended machine-learning research tasks spanning hypothesis generation, implementation, training, and experimental iteration. [Code](https://github.com/facebookresearch/MLGym)
 - [CORE-Bench](https://arxiv.org/abs/2409.11363) - Reproduction of computational research across multiple disciplines. [Code](https://github.com/siegelz/core-bench)
 - [PaperBench](https://openai.com/index/paperbench/) - Replication of 20 ICML papers, decomposed into 8,316 gradable tasks. [Code](https://github.com/openai/preparedness/tree/main/project/paperbench)
-- [METR: Measuring AI Ability to Complete Long Tasks](https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/) - Time-horizon methodology relevant to autonomous AI R&D.
 - [Meta-Agent Challenge](https://arxiv.org/abs/2606.04455) - Meta-agents build complete agents inside a sealed environment; a verifier scores the result on a hidden test set. [Code](https://github.com/ant-research/meta-agent-challenge)
-- [SE-Bench](https://arxiv.org/abs/2602.04811) - Measures whether an agent internalizes new API knowledge and later applies it without documentation access. [Code](https://github.com/thunlp/SE-Bench)
 - [Frontier-Eng](https://arxiv.org/abs/2604.12290) - Tracks improvement trajectories on 47 generative engineering-optimization tasks with frozen verifiers. [Code](https://github.com/EinsiaLab/Frontier-Engineering)
 - [NatureBench](https://arxiv.org/abs/2606.24530) - Scientific ML tasks derived from Nature-family papers with held-out tests and an information firewall. [Code](https://github.com/FrontisAI/NatureBench)
-- [PAST-Bench](https://arxiv.org/abs/2608.04003) - Longitudinal fresh-session sequences with persistence-on/off controls for attributing cross-session improvement. [Code](https://github.com/Gen-Verse/PAST-Bench)
-- [RSIBench-Data](https://arxiv.org/abs/2607.25886) - Evaluates data-centric research capabilities relevant to recursive improvement.
-- [SEA-Eval](https://arxiv.org/abs/2604.08988) - Evaluates self-evolving agents beyond isolated episodic scores.
+- [METR: Measuring AI Ability to Complete Long Tasks](https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/) - Time-horizon methodology relevant to autonomous AI R&D.
+
+### Common downstream taskbeds
+
+These evaluate a fixed agent on useful task distributions. An RSI study must add longitudinal splits, frozen selection gates, or matched non-improving controls before treating them as evidence of self-improvement.
+
+- [SWE-bench](https://arxiv.org/abs/2310.06770) - Real-world GitHub issue resolution. [Code](https://github.com/SWE-bench/SWE-bench)
+- [Terminal-Bench](https://github.com/harbor-framework/terminal-bench) - Complex terminal tasks with containerized execution and verifiers.
+- [ALE-Bench](https://github.com/SakanaAI/ALE-Bench) - Algorithm-engineering problems with score-based executable evaluation.
+- [SkillsBench](https://github.com/benchflow-ai/skillsbench) - Measures both skill utility and an agent's ability to use supplied skills.
+- [AppWorld](https://github.com/StonyBrookNLP/appworld) - Stateful app interactions with programmatic evaluation.
+- [tau-bench](https://github.com/sierra-research/tau-bench) - Tool–agent–user interaction in policy-constrained domains.
+- [MCP-Atlas](https://github.com/scaleapi/mcp-atlas) - Tool-use tasks over Model Context Protocol servers.
 
 ### What a convincing RSI evaluation should report
 
