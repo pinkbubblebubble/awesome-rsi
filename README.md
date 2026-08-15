@@ -1,0 +1,298 @@
+<div align="center">
+
+<img src="./assets/awesome-rsi-banner.png" alt="Awesome RSI — recursive improvement loops with evaluation and rollback" width="100%">
+
+# ♻️ Awesome Recursive Self-Improvement
+
+**A curated, high-signal index of recursive self-improvement (RSI) in AI: foundations, self-modifying agents, evaluation, and safety.**
+
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](./CONTRIBUTING.md)
+![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-blue.svg?style=flat-square)
+
+</div>
+
+_Last reviewed: 2026-08-15._
+
+> [!IMPORTANT]
+> **RSI is stronger than ordinary iteration.** This list distinguishes systems that improve a persistent part of themselves from systems that merely revise one answer. A recursive system must also improve, or repeatedly reuse, the mechanism that produces later improvements. Most current systems are bounded or partial RSI—not open-ended intelligence explosions.
+
+## Contents
+
+- [Scope and labels](#scope-and-labels)
+- [Start here](#start-here)
+- [Foundations](#foundations)
+- [Self-modifying and recursively improving agents](#self-modifying-and-recursively-improving-agents)
+- [Components of self-improvement](#components-of-self-improvement)
+- [Automated AI research](#automated-ai-research)
+- [Evaluation and benchmarks](#evaluation-and-benchmarks)
+- [Safety, limits, and governance](#safety-limits-and-governance)
+- [Self-improvement harnesses](#self-improvement-harnesses)
+- [Workshops and related collections](#workshops-and-related-collections)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Scope and labels
+
+This list uses three labels to keep adjacent research useful without overstating what it demonstrates:
+
+- **`RSI`** - the system changes a persistent part of itself, evaluates the change, and applies the same or an improved process again.
+- **`Self-improvement`** - the system persistently improves model weights, prompts, memory, tools, skills, or scaffolding, but the improvement operator itself remains fixed.
+- **`Enabler`** - automated research, optimization, evaluation, or safety work that could support RSI but is not itself RSI.
+
+Excluded by default: one-shot self-critique, answer-only refinement with no persistent update, generic agent frameworks, and projects whose improvement claims have no reproducible evaluation.
+
+## Start here
+
+- [`RSI` Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops](https://arxiv.org/abs/2607.07663) (2026) - Broad survey organizing self-improvement by what changes and who verifies the change.
+- [`RSI` From Seed AI to Technological Singularity via Recursively Self-Improving Software](https://arxiv.org/abs/1502.06512) (2015) - Definitions, prior work, computational limits, and RSI convergence theory.
+- [`RSI` Gödel Machines: Self-Referential Universal Problem Solvers Making Provably Optimal Self-Improvements](https://arxiv.org/abs/cs/0309048) (2003) - The classic formal architecture for provably useful self-rewrites.
+- [`RSI` Gödel Agent](https://arxiv.org/abs/2410.04444) (ACL 2025) - A self-referential LLM agent that edits its own logic rather than following a fixed hand-authored optimizer. [Code](https://github.com/Arvid-pku/Godel_Agent)
+- [`RSI` Darwin Gödel Machine](https://arxiv.org/abs/2505.22954) (2025) - Open-ended evolution of coding agents through self-modification, empirical evaluation, and an archive of variants. [Code](https://github.com/jennyzzt/dgm)
+- [`RSI` A Self-Improving Coding Agent (SICA)](https://arxiv.org/abs/2504.15228) (2025) - A coding agent repeatedly edits and benchmarks its own codebase. [Code](https://github.com/MaximeRobeyns/self_improving_coding_agent)
+- [`Self-improvement` OpenRSI / Frontis-MA1](https://arxiv.org/abs/2607.28568) (2026) - An executable AI4AI stack joining learned improvement operators, long-horizon program evolution, and held-out transfer evaluation. [Code](https://github.com/FrontisAI/OpenRSI)
+- [`Enabler` Diving into Reliable Self-Evolving Agents](https://openreview.net/forum?id=CGO1hDTHNe) (2026) - A five-level taxonomy separating output, model, scaffold, improver, and criterion evolution, with reliability requirements for each level. [Collection](https://github.com/wkqdzkd/Awesome-Reliable-Self-Evolving-Agents)
+
+## Foundations
+
+### Concepts and formal models
+
+- [Speculations Concerning the First Ultraintelligent Machine](https://www.sciencedirect.com/science/article/pii/S0065245808604180) (I. J. Good, 1965) - Introduced the intelligence-explosion argument.
+- [Gödel Machines](https://arxiv.org/abs/cs/0309048) (Jürgen Schmidhuber, 2003) - A proof-searching agent that rewrites any part of itself after proving a utility gain.
+- [Basic AI Drives](https://selfawaresystems.com/wp-content/uploads/2008/01/ai_drives_final.pdf) (Stephen Omohundro, 2008) - Instrumental pressures that can arise in sufficiently capable goal-directed systems.
+- [Intelligence Explosion Microeconomics](https://intelligence.org/files/IEM.pdf) (Eliezer Yudkowsky, 2013) - A detailed treatment of returns, bottlenecks, and dynamics in recursive improvement.
+- [From Seed AI to Technological Singularity via Recursively Self-Improving Software](https://arxiv.org/abs/1502.06512) (Roman Yampolskiy, 2015) - A taxonomy and critical analysis of RSI software.
+- [The Surprising Creativity of Digital Evolution](https://arxiv.org/abs/1803.03453) (Lehman et al., 2020) - Examples of unexpected solutions in evolutionary computation and lessons for open-ended search.
+- [Open-Endedness: The Last Grand Challenge You've Never Heard Of](https://arxiv.org/abs/1710.09974) (Stanley et al., 2017) - Why continually generating novelty is distinct from optimizing a fixed objective.
+
+### Pre-LLM stepping stones
+
+- [Learning to Learn by Gradient Descent by Gradient Descent](https://arxiv.org/abs/1606.04474) (NeurIPS 2016) - Learns an optimizer, a central mechanism for improving the improvement process.
+- [Population Based Training of Neural Networks](https://arxiv.org/abs/1711.09846) (2017) - Jointly evolves parameters and hyperparameters during training. [Overview](https://deepmind.google/blog/population-based-training-of-neural-networks/)
+- [AutoML-Zero](https://arxiv.org/abs/2003.03384) (ICML 2020) - Evolves complete machine-learning algorithms from primitive operations. [Code](https://github.com/google-research/google-research/tree/master/automl_zero)
+- [Mastering Atari, Go, Chess and Shogi by Planning with a Learned Model](https://arxiv.org/abs/1911.08265) (Nature 2020) - MuZero as a landmark self-play and learned-model system; adjacent, not recursive self-modification.
+
+## Self-modifying and recursively improving agents
+
+| Year | Work | Level | What changes |
+| ---: | --- | --- | --- |
+| 2023 | [Self-Taught Optimizer (STOP)](https://arxiv.org/abs/2310.02304) · [Code](https://github.com/microsoft/stop) | `RSI` | An LLM improves a program that is itself used to improve code. |
+| 2024 | [Automated Design of Agentic Systems (ADAS)](https://arxiv.org/abs/2408.08435) · [Code](https://github.com/ShengranHu/ADAS) | `Self-improvement` | A meta-agent searches over agent programs; the meta-optimizer stays fixed. |
+| 2024 | [AFlow: Automating Agentic Workflow Generation](https://arxiv.org/abs/2410.10762) · [Code](https://github.com/FoundationAgents/AFlow) | `Self-improvement` | Agent workflows are generated and refined against task feedback. |
+| 2025 | [Gödel Agent](https://arxiv.org/abs/2410.04444) · [Code](https://github.com/Arvid-pku/Godel_Agent) | `RSI` | The agent dynamically modifies its own task-solving and optimization logic. |
+| 2025 | [A Self-Improving Coding Agent (SICA)](https://arxiv.org/abs/2504.15228) · [Code](https://github.com/MaximeRobeyns/self_improving_coding_agent) | `RSI` | A coding agent edits and evaluates its own implementation. |
+| 2025 | [Darwin Gödel Machine](https://arxiv.org/abs/2505.22954) · [Code](https://github.com/jennyzzt/dgm) | `RSI` | An archive-based evolutionary loop modifies coding-agent code and reuses improved descendants. |
+| 2026 | [Huxley-Gödel Machine](https://arxiv.org/abs/2510.21614) · [Code](https://github.com/metauto-ai/HGM) | `RSI` | An empirical approximation of a Gödel machine develops its own coding-agent implementation. |
+| 2026 | [HyperAgents](https://arxiv.org/abs/2603.19461) · [Code](https://github.com/facebookresearch/HyperAgents) | `RSI` | Task and meta-agent roles are integrated so the agent can modify its own improver. |
+| 2026 | [MOSS](https://arxiv.org/abs/2605.22794) · [Code](https://github.com/hkgai-official/Moss) | `RSI` | An agent rewrites its TypeScript source, replays failure batches, and promotes container images through an approval and rollback gate. |
+| 2026 | [EvoTrainer](https://arxiv.org/abs/2606.03108) · [Code](https://github.com/AlibabaResearch/DAMO-ConvAI/tree/main/EvoTrainer) | `RSI` | Model policies and their training harnesses co-evolve under executable feedback. |
+| 2026 | [SIA: Self Improving AI with Harness & Weight Updates](https://arxiv.org/abs/2605.27276) · [Code](https://github.com/hexo-ai/sia) | `Self-improvement` | A meta-agent updates both task harnesses and model weights under benchmark feedback. |
+| 2026 | [Frontis-MA1 / OpenRSI](https://arxiv.org/abs/2607.28568) · [Code](https://github.com/FrontisAI/OpenRSI) | `Self-improvement` | Learned program-improvement operators and evolutionary search are joined in an executable MLE research stack. |
+
+## Components of self-improvement
+
+These works improve a persistent component and are important building blocks, but generally keep the outer improvement algorithm fixed.
+
+### Model weights and generated training data
+
+- [`Self-improvement` Large Language Models Can Self-Improve](https://arxiv.org/abs/2210.11610) (EMNLP 2023) - Iterative self-generated rationales improve reasoning without new human labels.
+- [`Self-improvement` Self-Instruct](https://arxiv.org/abs/2212.10560) (ACL 2023) - Bootstraps instruction-following data from a model's own generations. [Code](https://github.com/yizhongw/self-instruct)
+- [`Self-improvement` STaR: Self-Taught Reasoner](https://arxiv.org/abs/2203.14465) (NeurIPS 2022) - Alternates rationale generation and fine-tuning. [Code](https://github.com/ezelikman/STaR)
+- [`Self-improvement` Self-Play Fine-Tuning (SPIN)](https://arxiv.org/abs/2401.01335) (ICML 2024) - Uses successive model checkpoints as players in a self-play objective. [Code](https://github.com/uclaml/SPIN)
+- [`Self-improvement` Self-Rewarding Language Models](https://arxiv.org/abs/2401.10020) (2024) - The model generates both candidate responses and preference judgments for iterative training.
+- [`Self-improvement` Quiet-STaR](https://arxiv.org/abs/2403.09629) (2024) - Trains models to generate useful internal rationales broadly across text. [Code](https://github.com/ezelikman/quiet-star)
+- [`Self-improvement` Self-Adapting Language Models (SEAL)](https://arxiv.org/abs/2506.10943) (2025) - Generates its own update directives and training data for persistent adaptation. [Code](https://github.com/Continual-Intelligence/SEAL)
+
+### Prompts, memory, tools, and skills
+
+- [`Enabler` Reflexion](https://arxiv.org/abs/2303.11366) (NeurIPS 2023) - Stores verbal feedback in episodic memory to improve later attempts. [Code](https://github.com/noahshinn/reflexion)
+- [`Enabler` Self-Refine](https://arxiv.org/abs/2303.17651) (NeurIPS 2023) - Iterative feedback and revision without parameter updates. [Code](https://github.com/madaan/self-refine)
+- [`Self-improvement` Voyager](https://arxiv.org/abs/2305.16291) (2023) - Builds and reuses an executable skill library through environment interaction. [Code](https://github.com/MineDojo/Voyager)
+- [`Self-improvement` Optimization by PROmpting (OPRO)](https://arxiv.org/abs/2309.03409) (ICLR 2024) - Uses an LLM as an optimizer over natural-language prompts.
+- [`Self-improvement` Promptbreeder](https://arxiv.org/abs/2309.16797) (2023) - Evolves task prompts together with mutation prompts, making it unusually close to meta-improvement.
+- [`Self-improvement` Eureka](https://arxiv.org/abs/2310.12931) (ICLR 2024) - Evolves reward programs using environment feedback. [Code](https://github.com/eureka-research/Eureka)
+- [`Self-improvement` TextGrad](https://arxiv.org/abs/2406.07496) (2024) - Optimizes compound AI systems through textual feedback. [Code](https://github.com/zou-group/textgrad)
+- [`Self-improvement` GEPA](https://arxiv.org/abs/2507.19457) (2025) - Reflective, Pareto-based evolution of prompts and other textual components. [Code](https://github.com/gepa-ai/gepa)
+- [`Self-improvement` SkillOpt](https://arxiv.org/abs/2605.23904) (2026) - Optimizes reusable natural-language skills through trajectory-driven edits and held-out validation gates. [Code](https://github.com/microsoft/SkillOpt)
+- [`Self-improvement` SkillHone](https://arxiv.org/abs/2606.08671) (2026) - Evolves whole skill packages while retaining evaluation and promotion decisions as auditable Git artifacts. [Code](https://github.com/Tencent/SkillHone)
+- [`RSI` Who Grades the Grader?](https://arxiv.org/abs/2607.12790) (2026) - Co-evolves an inspectable evaluation metric with an agent skill library, exposing criterion drift as part of the loop. [Code](https://github.com/amazon-science/Self-Evolving-Agents-Double-Ratchet)
+
+## Automated AI research
+
+Automating AI R&D can close an important part of the RSI loop, but these systems usually optimize an external artifact rather than their own improvement procedure.
+
+- [`Enabler` MLAgentBench](https://arxiv.org/abs/2310.03302) (ICML 2024) - Agents execute iterative ML experiments on research tasks. [Code](https://github.com/snap-stanford/MLAgentBench)
+- [`Enabler` The AI Scientist](https://arxiv.org/abs/2408.06292) (2024) - End-to-end idea generation, experiments, writing, and review. [Code](https://github.com/SakanaAI/AI-Scientist)
+- [`Enabler` AIDE](https://arxiv.org/abs/2502.13138) (2025) - Tree-search ML engineering agent for iterative experiment design. [Code](https://github.com/WecoAI/aideml)
+- [`Enabler` AlphaEvolve](https://arxiv.org/abs/2506.13131) (2025) - Evolutionary coding agent for algorithmic and scientific discovery; it improves target programs, not itself.
+- [`Enabler` autoresearch](https://github.com/karpathy/autoresearch) (2026) - A minimal edit–train–measure–keep loop for autonomous ML experiments.
+- [`Self-improvement` A-Evolve](https://arxiv.org/abs/2602.00359) (2026) - General infrastructure for applying interchangeable evolution algorithms to agents across domains. [Code](https://github.com/A-EVO-Lab/a-evolve)
+- [`Self-improvement` OpenRSI](https://arxiv.org/abs/2607.28568) (2026) - Trains reusable AI4AI operators and composes them into long-horizon machine-learning engineering search. [Code](https://github.com/FrontisAI/OpenRSI)
+
+## Evaluation and benchmarks
+
+- [SWE-bench](https://arxiv.org/abs/2310.06770) - Real-world GitHub issue resolution; frequently used to measure coding-agent descendants. [Code](https://github.com/SWE-bench/SWE-bench)
+- [MLAgentBench](https://arxiv.org/abs/2310.03302) - ML experimentation tasks with execution-based evaluation. [Code](https://github.com/snap-stanford/MLAgentBench)
+- [MLE-bench](https://arxiv.org/abs/2410.07095) - 75 Kaggle competitions for measuring ML-engineering agents. [Code](https://github.com/openai/mle-bench)
+- [RE-Bench](https://arxiv.org/abs/2411.15114) - Open-ended AI R&D environments with direct human-expert comparisons. [Code](https://github.com/METR/RE-Bench)
+- [CORE-Bench](https://arxiv.org/abs/2409.11363) - Reproduction of computational research across multiple disciplines. [Code](https://github.com/siegelz/core-bench)
+- [PaperBench](https://openai.com/index/paperbench/) - Replication of 20 ICML papers, decomposed into 8,316 gradable tasks. [Code](https://github.com/openai/preparedness/tree/main/project/paperbench)
+- [METR: Measuring AI Ability to Complete Long Tasks](https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/) - Time-horizon methodology relevant to autonomous AI R&D.
+- [Meta-Agent Challenge](https://arxiv.org/abs/2606.04455) - Meta-agents build complete agents inside a sealed environment; a verifier scores the result on a hidden test set. [Code](https://github.com/ant-research/meta-agent-challenge)
+- [SE-Bench](https://arxiv.org/abs/2602.04811) - Measures whether an agent internalizes new API knowledge and later applies it without documentation access. [Code](https://github.com/thunlp/SE-Bench)
+- [Frontier-Eng](https://arxiv.org/abs/2604.12290) - Tracks improvement trajectories on 47 generative engineering-optimization tasks with frozen verifiers. [Code](https://github.com/EinsiaLab/Frontier-Engineering)
+- [NatureBench](https://arxiv.org/abs/2606.24530) - Scientific ML tasks derived from Nature-family papers with held-out tests and an information firewall. [Code](https://github.com/FrontisAI/NatureBench)
+- [PAST-Bench](https://arxiv.org/abs/2608.04003) - Longitudinal fresh-session sequences with persistence-on/off controls for attributing cross-session improvement. [Code](https://github.com/Gen-Verse/PAST-Bench)
+- [RSIBench-Data](https://arxiv.org/abs/2607.25886) - Evaluates data-centric research capabilities relevant to recursive improvement.
+- [SEA-Eval](https://arxiv.org/abs/2604.08988) - Evaluates self-evolving agents beyond isolated episodic scores.
+
+### What a convincing RSI evaluation should report
+
+- Performance across **multiple generations**, including regressions and variance—not only the best descendant.
+- A held-out evaluator or verifier that the system cannot rewrite or directly optimize against.
+- Ablations for self-modification, archive/search strategy, memory, and external feedback.
+- Generalization to tasks that were not used to select modifications.
+- Compute, wall-clock time, model/API version, prompts, trajectories, and failed attempts.
+- Safety isolation, change permissions, rollback behavior, and the exact human interventions.
+
+## Safety, limits, and governance
+
+- [The Basic AI Drives](https://selfawaresystems.com/wp-content/uploads/2008/01/ai_drives_final.pdf) (2008) - Why self-preservation, resource acquisition, and self-improvement may emerge instrumentally.
+- [Risks from Learned Optimization in Advanced Machine Learning Systems](https://arxiv.org/abs/1906.01820) (2019) - Mesa-optimization and objectives learned inside an optimizing system.
+- [The Alignment Problem from a Deep Learning Perspective](https://arxiv.org/abs/2209.00626) (2022) - Technical survey of alignment failure modes relevant to increasingly autonomous systems.
+- [Goal Misgeneralization in Deep Reinforcement Learning](https://arxiv.org/abs/2105.14111) (ICML 2022) - Capable policies can pursue unintended goals outside training conditions.
+- [The Curse of Recursion](https://arxiv.org/abs/2305.17493) (2023) - Repeated training on generated data can cause model collapse.
+- [Large Language Models Cannot Self-Correct Reasoning Yet](https://arxiv.org/abs/2310.01798) (ICLR 2024) - Evidence that intrinsic self-correction can degrade performance without external feedback.
+- [Sleeper Agents](https://arxiv.org/abs/2401.05566) (2024) - Safety training may fail to remove deceptive, conditionally triggered behavior.
+- [Weak-to-Strong Generalization](https://arxiv.org/abs/2312.09390) (ICML 2024) - Empirical study of supervising stronger models with weaker ones. [Code](https://github.com/openai/weak-to-strong)
+- [Large Language Model Agents Are Not Always Faithful Self-Evolvers](https://arxiv.org/abs/2601.22436) (ICML 2026) - Studies whether retained updates actually reflect the experience claimed to cause them. [Code](https://github.com/Dreamcatcher0622/Faithfulness)
+- [Recursive Self-Evolving Agents via Held-Out Selection](https://arxiv.org/abs/2606.28374) (2026) - Separates mutation from promotion using held-out selection signals.
+- [Zombie Agents](https://arxiv.org/abs/2602.15654) (ICLR 2026 Workshop) - Demonstrates persistent, self-reinforcing injections in agents that update their own state.
+- [Safety in Self-Evolving LLM Agent Systems](https://arxiv.org/abs/2606.23075) (2026) - Threat model and case studies for amplification across persistent update loops.
+- [International AI Safety Report](https://internationalaisafetyreport.org/) - Consensus-oriented review of frontier capabilities, loss-of-control risks, and safeguards.
+
+> [!WARNING]
+> Self-modifying agents execute model-generated code and may alter their own safeguards. Use isolated, disposable environments; least-privilege credentials; immutable evaluators; resource limits; append-only logs; and human approval for promotion. Do not run experimental RSI systems against valuable hosts, secrets, or production infrastructure.
+
+## Self-improvement harnesses
+
+This section indexes runnable systems rather than every repository that uses the words “self-improving.” The **Gate** column records the strongest promotion evidence documented by the project:
+
+- **Frozen eval** - candidates are scored by an evaluator outside the editable surface.
+- **Keep/revert** - a candidate must beat a baseline or pass checks before it becomes persistent.
+- **Versioned** - changes and lineage are recorded, but promotion may still rely on model or human judgment.
+- **Memory only** - experience persists without a demonstrated candidate-selection loop; useful, but not RSI by itself.
+
+### Full harness and agent evolution
+
+These systems can alter multiple parts of an agent or its harness, not just the answer to one task.
+
+| Project | Persistent surface | Gate | Evidence |
+| --- | --- | --- | --- |
+| [Penguin Harness](https://github.com/Prism-Shadow/penguin-harness) | Prompts, skills, runtime configuration | Frozen eval + keep/revert | Benchmarks, traces, versioned snapshots |
+| [Darwin Gödel Machine](https://github.com/jennyzzt/dgm) | Coding-agent implementation | Frozen eval + archive | [Paper](https://arxiv.org/abs/2505.22954) |
+| [SICA](https://github.com/MaximeRobeyns/self_improving_coding_agent) | Its own coding-agent codebase | Benchmark + keep/revert | [Paper](https://arxiv.org/abs/2504.15228) |
+| [Gödel Agent](https://github.com/Arvid-pku/Godel_Agent) | Agent logic and self-improvement procedure | Task evaluation | [Paper](https://arxiv.org/abs/2410.04444) |
+| [Huxley-Gödel Machine](https://github.com/metauto-ai/HGM) | Coding-agent implementation | Benchmark + evolutionary selection | [Paper](https://arxiv.org/abs/2510.21614) |
+| [HyperAgents](https://github.com/facebookresearch/HyperAgents) | Task agent and meta-agent logic | Task evaluation | [Paper](https://arxiv.org/abs/2603.19461) |
+| [MOSS](https://github.com/hkgai-official/Moss) | TypeScript source and container image | Replay + approval + rollback | [Paper](https://arxiv.org/abs/2605.22794) |
+| [SIA](https://github.com/hexo-ai/sia) | Harness and model weights | Benchmark selection | [Paper](https://arxiv.org/abs/2605.27276) |
+| [Prime Agent](https://github.com/PrimeIntellect-ai/prime-agent) | Prompts, memories, skills, subagent specifications | Quality gates + snapshots + rollback | [Continual Harness paper](https://arxiv.org/abs/2605.09998) |
+| [HALO](https://github.com/context-labs/HALO) | Prompts, tools, routing, and agent loop | Trace diagnosis + benchmark comparison | Production-trace optimizer |
+| [AutoAgent](https://github.com/kevinrgu/autoagent) | System prompt, tools, configuration, orchestration | Benchmark + keep/discard | Autonomous harness engineering |
+| [Harness Evolver](https://github.com/raphaelchristi/harness-evolver) | Prompts, routing, retrieval, tools, orchestration | Held-out eval + constraints + rollback | [Meta-Harness paper](https://arxiv.org/abs/2603.28052) |
+| [MetaHarness](https://github.com/ruvnet/metaharness) | Generated harness, skills, memory, and learning loop | Tests + benchmark + signed release gates | Harness factory with Darwin mode |
+| [RSIHub](https://github.com/simple-agent-lab/RSIHub) | Declared agent mutation surfaces | Frozen eval + evidence-gated promotion | Reproducible lineage |
+| [KADATH](https://github.com/i3T4AN/KADATH) | Populations of multi-agent configurations | Locked evaluator + benchmark epochs | Git lineage; outer kernel remains fixed |
+| [GEA](https://github.com/UCSB-AI/GEA) | Agent variants and shared experience | Benchmark selection | [Paper](https://arxiv.org/abs/2602.04837) |
+| [Yunjue Agent](https://github.com/YunjueTech/Yunjue-Agent) | Executable tools and their versions | Binary execution feedback | [Paper](https://arxiv.org/abs/2601.18226) |
+| [CORAL](https://github.com/Human-Agent-Society/CORAL) | Agent organizations, shared skills, attempts, and policies | Grader-scored commits | [Paper](https://arxiv.org/abs/2604.01658) |
+| [OpenRSI](https://github.com/FrontisAI/OpenRSI) | Improvement operators, programs, and model weights | Held-out transfer evaluation | [Paper](https://arxiv.org/abs/2607.28568) |
+| [A-Evolve](https://github.com/A-EVO-Lab/a-evolve) | Agent programs and evolutionary strategy configuration | Pluggable evaluators + archive | [Paper](https://arxiv.org/abs/2602.00359) |
+| [Exo](https://github.com/exoharness/exo) | Prompts, memory, tools, policy, harness code | Immutable event history; experimental | Recursive harness runtime |
+| [Yoyo Evolve](https://github.com/yologdev/yoyo-evolve) | Its own Rust source | Tests + scheduled promotion | Public GitHub evolution history |
+
+### Prompt, skill, memory, and context evolution
+
+These projects evolve a narrower persistent layer. Entries with **Memory only** are included as infrastructure, not claimed as recursive self-improvement.
+
+| Project | Persistent surface | Gate | Evidence |
+| --- | --- | --- | --- |
+| [SkillOpt](https://github.com/microsoft/SkillOpt) | Natural-language skills | Held-out validation + promotion | [Paper](https://arxiv.org/abs/2605.23904) |
+| [SkillHone](https://github.com/Tencent/SkillHone) | Whole skill packages | Evaluation + Git-native decisions | [Paper](https://arxiv.org/abs/2606.08671) |
+| [EvoSkill](https://github.com/sentient-agi/EvoSkill) | Skills and prompts synthesized from failures | Held-out evaluation | [Paper](https://arxiv.org/abs/2603.02766) |
+| [Hermes Agent Self-Evolution](https://github.com/NousResearch/hermes-agent-self-evolution) | Skills, tool descriptions, system prompts, code | Tests, size limits, benchmark selection | DSPy + GEPA optimizer |
+| [AutoContext](https://github.com/greyhaven-ai/autocontext) | Lessons, playbooks, datasets, training artifacts | Task evaluation + retained successes | Recursive improvement runs |
+| [Agent Digivolve Harness](https://github.com/MatthewZMD/agent-digivolve-harness-loop) | Versioned agent configuration | Fixed eval + baseline + keep/revert | Bounded mutation and resumable runs |
+| [Auto Agent](https://github.com/alfonsograziano/auto-agent) | Prompt, tools, and agent implementation | Immutable golden eval + rollback | Branch-per-hypothesis workflow |
+| [Recursive Improve](https://github.com/kayba-ai/recursive-improve) | Agent versions generated from traces | Metrics + version comparison | Trace-driven dashboard |
+| [AgentDescent](https://github.com/Birfy/agentdescent) | Skills, prompts, and harness artifacts | Parallel evaluation + versioned candidates | Asynchronous optimizer |
+| [Evolver](https://github.com/EvoMap/evolver) | Genes, reusable capsules, and personality | Versioned events + rollback | [Paper](https://arxiv.org/abs/2604.15097) |
+| [Raven](https://github.com/EverMind-AI/Raven) | Memory, skills, tools, and policies | Versioned traces + Evolver evaluations | Memory-first harness |
+| [Hivemind](https://github.com/activeloopai/hivemind) | Reusable skills distilled from traces | Trace feedback and skill propagation | Cross-agent learning layer |
+| [Rudder](https://github.com/Undertone0809/rudder) | Team feedback and reviewed skills | Human review + local benchmark | Does not auto-promote every lesson |
+| [GenericAgent](https://github.com/lsdefine/GenericAgent) | Executable skill tree | Task success; versioned | Minimal growing agent |
+| [OpenViking](https://github.com/volcengine/OpenViking) | Memory, knowledge, context, and skills | Versioned context + benchmarks | Context database, not a full agent loop |
+| [Hive](https://github.com/aden-hive/hive) | Reflexion memory, skills, and playbooks | Memory only | Production multi-agent harness |
+| [Voyager](https://github.com/MineDojo/Voyager) | Executable skill library | Environment feedback | [Paper](https://arxiv.org/abs/2305.16291) |
+| [SEAL](https://github.com/Continual-Intelligence/SEAL) | Model weights through generated update data | Reward-guided training | [Paper](https://arxiv.org/abs/2506.10943) |
+
+### Research and domain optimization harnesses
+
+These run closed experimentation loops, but usually improve a target program, scientific artifact, or domain policy rather than the general harness itself.
+
+| Project | Optimized artifact | Selection signal |
+| --- | --- | --- |
+| [autoresearch](https://github.com/karpathy/autoresearch) | ML training code | Fixed validation metric + keep/revert |
+| [OpenEvolve](https://github.com/codelion/openevolve) | Arbitrary programs | User-supplied executable evaluators |
+| [Distributed OpenEvolve](https://github.com/algorithmicsuperintelligence/openevolve) | Arbitrary programs | Distributed evaluation and archive |
+| [AutoKernel](https://github.com/RightNow-AI/autokernel) | Triton GPU kernels | Correctness + performance benchmark |
+| [The AI Scientist](https://github.com/SakanaAI/AI-Scientist) | Ideas, experiments, papers, and reviews | Experimental results + reviewer model |
+| [AIDE](https://github.com/WecoAI/aideml) | Machine-learning solutions | Tree search over validation scores |
+| [CORAL](https://github.com/Human-Agent-Society/CORAL) | Research code and agent organization | Grader-scored commits and shared experience |
+| [Agon](https://github.com/AutoResearch-Factory/Agon) | Research proposals and experiments | Executed experiments and file-based review |
+| [NanoResearch](https://github.com/OpenRaiser/NanoResearch) | Research policy, skills, and memory | Co-evolution loop; [paper](https://arxiv.org/abs/2605.10813) |
+| [EvoScientist](https://github.com/EvoScientist/EvoScientist) | Research skills and memory | Reviewed AutoSkills; [paper](https://arxiv.org/abs/2603.08127) |
+
+### Autoresearch loop implementations
+
+These repositories package the edit–measure–keep loop for particular coding agents or deployment environments. They are useful harnesses, although the loop itself is normally fixed.
+
+- [Pi Autoresearch](https://github.com/davebcn87/pi-autoresearch) - Autonomous experiment-loop extension for the Pi coding agent.
+- [Claude Autoresearch](https://github.com/uditgoenka/autoresearch) - Goal-directed modify–verify–keep/discard skill for Claude Code.
+- [Codex Autoresearch](https://github.com/leo-lilinxiao/codex-autoresearch) - Continuous modify–verify–retain/discard skill for Codex.
+- [Autoresearch at Home](https://github.com/mutable-state-inc/autoresearch-at-home) - Single-GPU autonomous research over NanoChat training.
+- [Research Loop](https://github.com/junjunjunbong/research-loop) - Bootstraps safe, auditable research loops inside existing Git repositories.
+- [Thoth](https://github.com/SeeleAI/Thoth) - Dashboard-first orchestration runtime for autoresearch runs.
+- [goal.md](https://github.com/jmilinovich/goal-md) - Generalizes autoresearch with constructed metrics and an explicit goal specification.
+
+### General agent optimizers
+
+- [STOP](https://github.com/microsoft/stop) - Recursively improves a code optimizer; one of the clearest compact examples of optimizing the optimizer.
+- [ADAS](https://github.com/ShengranHu/ADAS) - Searches for agent programs with a fixed meta-agent.
+- [AFlow](https://github.com/FoundationAgents/AFlow) - Searches over executable agent workflows.
+- [GEPA](https://github.com/gepa-ai/gepa) - Reflective Pareto evolution of prompts and other textual components.
+- [TextGrad](https://github.com/zou-group/textgrad) - Textual feedback and gradients for compound AI systems.
+- [Eureka](https://github.com/eureka-research/Eureka) - Evolves reward programs using environment feedback.
+- [Self-Instruct](https://github.com/yizhongw/self-instruct) - Generates persistent instruction-tuning data; a model-adaptation precursor rather than a harness.
+
+## Workshops and related collections
+
+- [ICLR 2025 Workshop on Scaling Self-Improving Foundation Models](https://sites.google.com/view/ssi-fm-workshop) - Research on self-improvement, feedback, evaluation, and scalable oversight.
+- [Awesome Self-Improving Agents](https://github.com/selfimproving-agent/Awesome-Self-Improving-Agents) - Broad collection of foundation-model and scaffold improvement work.
+- [Awesome Autoresearch](https://github.com/webfuse-com/awesome-autoresearch) - Autonomous experiment loops and descendants of `karpathy/autoresearch`.
+- [Awesome LLM Agent Optimization](https://github.com/YoungDubbyDu/LLM-Agent-Optimization) - Agent workflow, prompt, memory, and tool optimization papers.
+- [Awesome AI Scientist Papers](https://github.com/openags/Awesome-AI-Scientist-Papers) - Automated scientific discovery systems and literature.
+- [Awesome Self-Evolving Coding Agents](https://github.com/zhouhao1024/Awesome-Self-Evolving-Coding-Agents) - Coding-focused self-evolution papers and systems.
+- [Prism Shadow's Awesome RSI](https://github.com/Prism-Shadow/awesome-rsi) - Research-oriented index of RSI methods and benchmarks.
+- [Awesome Reliable Self-Evolving Agents](https://github.com/wkqdzkd/Awesome-Reliable-Self-Evolving-Agents) - Large companion catalog organized from output-level through criterion-level evolution.
+- [FrontisAI Awesome Self-Improving Agents](https://github.com/FrontisAI/Awesome-Self-Improving-Agents) - Survey collection focused on the path from self-evolution to meta-evolution.
+- [Awesome Self-Evolving Agents](https://github.com/XMUDeepLIT/Awesome-Self-Evolving-Agents) - Survey collection covering model, memory, tool, and architecture evolution.
+
+## Contributing
+
+Contributions are welcome. Please read [CONTRIBUTING.md](./CONTRIBUTING.md) before opening a pull request. New entries should identify the persistent component that changes, the source of evaluation, and whether the improvement operator itself changes.
+
+## License
+
+To the extent possible under law, this list is dedicated to the public domain under [CC0-1.0](./LICENSE).
