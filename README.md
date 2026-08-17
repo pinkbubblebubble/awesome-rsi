@@ -424,7 +424,7 @@ These repositories package the edit–measure–keep loop for particular coding 
 - [Prism Shadow's Awesome RSI](https://github.com/Prism-Shadow/awesome-rsi) - Research-oriented index of RSI methods and benchmarks.
 - [Token Rhythm's Awesome RSI](https://github.com/Token-Rhythm/awesome-rsi) - Evidence-oriented catalog spanning foundations, self-modification, open-ended search, limits, and governance.
 - [LobeHub Awesome RSI](https://github.com/lobehub/awesome-rsi) - Broad research map separating model-, harness-, coding-, and multi-agent-level self-improvement.
-- [Awesome Recursive Self-Improvement](https://github.com/natnew/awesome-recursive-self-improvement) - Reading paths across self-refinement, experience learning, automated curricula, and governed improvement loops.
+- [Awesome Recursive Self-Improvement](https://github.com/natnew/awesome-recursive-self-improvement) - Collection covering self-refinement, experience learning, automated curricula, and governed improvement loops.
 - [Awesome Reliable Self-Evolving Agents](https://github.com/wkqdzkd/Awesome-Reliable-Self-Evolving-Agents) - Large companion catalog organized from output-level through criterion-level evolution.
 - [FrontisAI Awesome Self-Improving Agents](https://github.com/FrontisAI/Awesome-Self-Improving-Agents) - Survey collection focused on the path from self-evolution to meta-evolution.
 - [Awesome Self-Evolving Agents](https://github.com/XMUDeepLIT/Awesome-Self-Evolving-Agents) - Survey collection covering model, memory, tool, and architecture evolution.
