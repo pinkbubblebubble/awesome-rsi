@@ -4,7 +4,7 @@
 
 # ♻️ Awesome Recursive Self-Improvement
 
-Research and open-source systems for recursive self-improvement (RSI) in AI: persistent learning loops, self-modifying agents, evaluation, and safety.
+**A curated, high-signal index of recursive self-improvement (RSI) in AI: foundations, self-modifying agents, evaluation, and safety.**
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 ![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-blue.svg?style=flat-square)
@@ -19,7 +19,6 @@ _Last reviewed: 2026-08-18._
 ## Contents
 
 - [Scope and labels](#scope-and-labels)
-- [Reading paths](#reading-paths)
 - [Start here](#start-here)
 - [Surveys and taxonomies](#surveys-and-taxonomies)
 - [Foundations](#foundations)
@@ -54,16 +53,6 @@ Excluded by default: one-shot self-critique, answer-only refinement with no pers
 | Optimizes an external artifact while the agent remains fixed | Yes, in an adjacent section | `Enabler` |
 
 The unit of analysis is the **deployed agent system**, not only its neural weights. Model, data, prompt, memory, tool, workflow, harness, evaluator, and environment are all legitimate update surfaces, but changing a surface is not automatically recursive improvement.
-
-## Reading paths
-
-**New to RSI.** Read Scope and labels, then Start here, Surveys and taxonomies, and Foundations.
-
-**Building a self-improving system.** Begin with Self-improvement harnesses, then compare update surfaces in Components of self-improvement and promotion gates in Evaluation and benchmarks.
-
-**Designing evaluations.** Start with Direct self-improvement and longitudinal evaluation, then use What a convincing RSI evaluation should report.
-
-**Studying safety.** Read Safety, limits, and governance together with the evaluator-evolution systems in Self-modifying and recursively improving agents.
 
 ## Start here
 
