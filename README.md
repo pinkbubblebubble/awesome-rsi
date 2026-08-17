@@ -12,7 +12,7 @@
 
 </div>
 
-_Last reviewed: 2026-08-15._
+_Last reviewed: 2026-08-18._
 
 > [!IMPORTANT]
 > **RSI is stronger than ordinary iteration.** This list distinguishes systems that improve a persistent part of themselves from systems that merely revise one answer. A recursive system must also improve, or repeatedly reuse, the mechanism that produces later improvements. Most current systems are bounded or partial RSI—not open-ended intelligence explosions.
@@ -218,6 +218,7 @@ A downstream task score is not by itself an RSI evaluation. Direct benchmarks be
 - [PaperBench](https://openai.com/index/paperbench/) - Replication of 20 ICML papers, decomposed into 8,316 gradable tasks. [Code](https://github.com/openai/preparedness/tree/main/project/paperbench)
 - [Meta-Agent Challenge](https://arxiv.org/abs/2606.04455) - Meta-agents build complete agents inside a sealed environment; a verifier scores the result on a hidden test set. [Code](https://github.com/ant-research/meta-agent-challenge)
 - [Frontier-Eng](https://arxiv.org/abs/2604.12290) - Tracks improvement trajectories on 47 generative engineering-optimization tasks with frozen verifiers. [Code](https://github.com/EinsiaLab/Frontier-Engineering)
+- [`Enabler` Φ-Bench: Can Large Language Models Engineer the Infrastructure That Powers Them?](https://faibench.org/) (2026) - A StepFun- and USTC-led benchmark with 85 Docker-reproducible LLM-infrastructure engineering tasks spanning kernel function completion, long-horizon repository implementation, and end-to-end system optimization. It supplies executable infrastructure tasks and offline graders for RSI research, but does not itself measure persistent or recursive self-change. [Code and paper](https://github.com/one2piece2hello/faibench_Frontier_InfraBench) · [Dataset](https://huggingface.co/datasets/faibench-Frontier-Infra-Bench/faibench_Frontier_Infra_Bench)
 - [NatureBench](https://arxiv.org/abs/2606.24530) - Scientific ML tasks derived from Nature-family papers with held-out tests and an information firewall. [Code](https://github.com/FrontisAI/NatureBench)
 - [METR: Measuring AI Ability to Complete Long Tasks](https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/) - Time-horizon methodology relevant to autonomous AI R&D.
 
