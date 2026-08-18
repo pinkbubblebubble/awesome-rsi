@@ -33,8 +33,10 @@ Data-centric work is in scope when the system generates, selects, filters, repai
 Use this format for papers:
 
 ```markdown
-- [`RSI` Paper Title](https://example.com/paper) (Venue Year) - What changes, how it is evaluated, and why the loop is recursive. [Code](https://github.com/org/repo)
+- ![RSI][rsi-badge] [Paper Title](https://example.com/paper) (Venue Year) - What changes, how it is evaluated, and why the loop is recursive. [![Code][code-badge]](https://github.com/org/repo "Code")
 ```
+
+Reuse the badge references already defined at the end of `README.md`; do not add one-off badge colors or labels.
 
 Use this format for projects:
 
