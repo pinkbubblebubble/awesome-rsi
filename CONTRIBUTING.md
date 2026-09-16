@@ -15,6 +15,10 @@ For systems that claim self-improvement, a contribution must say:
 
 One-shot answer revision, generic agent frameworks, promotional claims without evaluation, duplicate links, and abandoned toy projects with no distinct technical contribution are normally out of scope.
 
+### Engineering reports and blogs
+
+Official technical blogs, engineering reports, and release notes are welcome when they document an implemented system, an evaluation protocol, reproducible results, or concrete lessons directly relevant to RSI. Prefer the primary organization or project source, label it with the shared `Blog` badge, and link the paper and code separately when they exist. A blog does not replace a paper as the primary research record, and marketing-only announcements without technical evidence are out of scope.
+
 ### Data and dataset evolution
 
 Data-centric work is in scope when the system generates, selects, filters, repairs, or reorganizes experience and the resulting dataset is consumed by a later training or decision round. State the producer, selection signal, consumer, and whether this cycle repeats. Static synthetic datasets, ordinary augmentation, and benchmark releases remain useful only as `Enabler` entries unless they participate in such a closed loop.
