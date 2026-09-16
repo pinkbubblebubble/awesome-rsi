@@ -163,6 +163,7 @@ Data evolution belongs here when generated experience is **persisted, selected o
 - ![Self-improvement][self-improvement-badge] [WebRL](https://arxiv.org/abs/2411.02337) (ICLR 2025) - Trains web agents with a self-evolving online curriculum grounded in executable interaction. [![Code][code-badge]](https://github.com/THUDM/WebRL "Code")
 - ![Self-improvement][self-improvement-badge] [RAGEN](https://arxiv.org/abs/2504.20073) (2025) - Studies self-evolution through multi-turn agent reinforcement learning. [![Code][code-badge]](https://github.com/mll-lab-nu/RAGEN "Code")
 - ![Self-improvement][self-improvement-badge] [DataFoundry](https://arxiv.org/abs/2608.29966) (2026) - Evolves executable data-preparation specifications through repeated proposal, evaluation, and reuse rather than treating synthetic data as a one-shot artifact.
+- ![Self-improvement][self-improvement-badge] [G-Zero: Self-Play for Open-Ended Generation from Zero Data](https://arxiv.org/abs/2605.09959) (2026) - Co-evolves a proposer and a generator for open-ended generation with an intrinsic hint-conditioned predictive-shift reward in place of an external judge, evaluated on open-ended generation benchmarks.
 - ![Self-improvement][self-improvement-badge] [NeoHorse-1](https://arxiv.org/abs/2609.08183) (2026) - Converts routing-harness trajectories into curricula and on-policy distillation data, then uses the resulting policy to shape the next training mixture. [![Code][code-badge]](https://github.com/TokenRhythm/NeoHorse "Code")
 
 ### Prompts, memory, tools, and skills
