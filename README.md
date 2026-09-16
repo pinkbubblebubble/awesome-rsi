@@ -165,6 +165,7 @@ Data evolution belongs here when generated experience is **persisted, selected o
 - ![Self-improvement][self-improvement-badge] [DataFoundry](https://arxiv.org/abs/2608.29966) (2026) - Evolves executable data-preparation specifications through repeated proposal, evaluation, and reuse rather than treating synthetic data as a one-shot artifact.
 - ![Self-improvement][self-improvement-badge] [G-Zero: Self-Play for Open-Ended Generation from Zero Data](https://arxiv.org/abs/2605.09959) (2026) - Co-evolves a proposer and a generator for open-ended generation with an intrinsic hint-conditioned predictive-shift reward in place of an external judge, evaluated on open-ended generation benchmarks.
 - ![Self-improvement][self-improvement-badge] [NeoHorse-1](https://arxiv.org/abs/2609.08183) (2026) - Converts routing-harness trajectories into curricula and on-policy distillation data, then uses the resulting policy to shape the next training mixture. [![Code][code-badge]](https://github.com/TokenRhythm/NeoHorse "Code")
+- ![Self-improvement][self-improvement-badge] [TTCS: Test-Time Curriculum Synthesis for Self-Evolving](https://arxiv.org/abs/2601.22628) (2026) - Co-evolves a question synthesizer and a solver during test-time training with self-consistency rewards so that synthesized curricula stabilize parameter updates, evaluated on math and general reasoning across LLM backbones. [![Code][code-badge]](https://github.com/XMUDeepLIT/TTCS "Code")
 
 ### Prompts, memory, tools, and skills
 
