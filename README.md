@@ -98,6 +98,7 @@ The unit of analysis is the **deployed agent system**, not only its neural weigh
 - [The Surprising Creativity of Digital Evolution](https://arxiv.org/abs/1803.03453) (Lehman et al., 2020) - Examples of unexpected solutions in evolutionary computation and lessons for open-ended search.
 - [Open-Endedness: The Last Grand Challenge You've Never Heard Of](https://arxiv.org/abs/1710.09974) (Stanley et al., 2017) - Why continually generating novelty is distinct from optimizing a fixed objective.
 - [Generalized Agent Iteration](https://arxiv.org/abs/2609.13406) (2026) - Places iterative policy improvement and RSI in one formal framework using two axes: whether the improving mechanism is inside the agent and whether evaluation remains externally grounded.
+- [The Economics of Recursive Self-Improvement](https://arxiv.org/abs/2609.15802) (2026) - Models feedback between AI capabilities and AI R&D with coupled elasticities, separates narrow benchmark gains from broad capability gains, and identifies measurements needed to test whether self-sustaining acceleration is occurring.
 
 ### Pre-LLM stepping stones
 
