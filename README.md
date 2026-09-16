@@ -206,6 +206,7 @@ Automating AI R&D can close an important part of the RSI loop, but these systems
 - ![Self-improvement][self-improvement-badge] [A-Evolve](https://arxiv.org/abs/2602.00359) (2026) - General infrastructure for applying interchangeable evolution algorithms to agents across domains. [![Code][code-badge]](https://github.com/A-EVO-Lab/a-evolve "Code")
 - ![Self-improvement][self-improvement-badge] [OpenRSI / OpenMLE](https://arxiv.org/abs/2607.28568) (2026) - The Tsinghua-affiliated stack trains reusable AI4AI operators and composes them into long-horizon machine-learning engineering search. It releases task and execution infrastructure, training code and data, model weights, and evolutionary search. [![Code][code-badge]](https://github.com/FrontisAI/OpenRSI "Code")
 - ![Enabler][enabler-badge] [AREX](https://arxiv.org/abs/2607.21461) (2026) - Recursively refines research answers and learned context for deep-research tasks; relevant to RSI, but it does not demonstrate open-ended self-modification of the outer improver.
+- ![Enabler][enabler-badge] [LLMs Improving LLMs: Agentic Discovery for Test-Time Scaling (AutoTTS)](https://arxiv.org/abs/2605.08083) (2026) - An LLM agent searches an execution-trace environment for test-time scaling controllers that transfer to held-out benchmarks and model scales; it improves inference strategies for other models rather than itself. [![Code][code-badge]](https://github.com/zhengkid/AutoTTS "Code")
 
 ## Software-engineering self-improvement
 
