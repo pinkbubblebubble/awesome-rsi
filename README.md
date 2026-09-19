@@ -11,7 +11,7 @@
 
 </div>
 
-_Last reviewed: 2026-09-16._
+_Last reviewed: 2026-09-19._
 
 > [!IMPORTANT]
 > **RSI is stronger than ordinary iteration.** This list distinguishes systems that improve a persistent part of themselves from systems that merely revise one answer. A recursive system must also improve, or repeatedly reuse, the mechanism that produces later improvements. Most current systems are bounded or partial RSI—not open-ended intelligence explosions.
@@ -132,6 +132,8 @@ The unit of analysis is the **deployed agent system**, not only its neural weigh
 | 2026 | [WHALE: A Simple Recipe for Joint Harness-Weight Optimization](https://arxiv.org/abs/2609.00196) · [![Code][code-badge]](https://github.com/krafton-ai/WHALE "Code") | ![Self-improvement][self-improvement-badge] | Alternates model-weight updates with harness search so improvements in one surface become training signal for the other. |
 | 2026 | [MetaRSI / RSI2](https://arxiv.org/abs/2609.06396) | ![RSI][rsi-badge] | A meta-policy revises how Data-RSI, Harness-RSI, and Model-RSI are composed and scheduled across improvement rounds. |
 | 2026 | [ScienceBuddy](https://arxiv.org/abs/2609.17523) · [![Code][code-badge]](https://github.com/Gen-Verse/ScienceBuddy "Code") | ![Self-improvement][self-improvement-badge] | Couples inner harness evolution with outer model reinforcement learning; the released system improves two persistent surfaces while the alternating outer protocol remains fixed. |
+| 2026 | [ModularRSI](https://arxiv.org/abs/2609.14857) · [![Code][code-badge]](https://github.com/IQuestLab/ModularRSI "Code") · [![Dataset][dataset-badge]](https://huggingface.co/datasets/IQuestLab/ModularRSI_2000_Instances "Evolution tasks") | ![Self-improvement][self-improvement-badge] | Evolves five restricted harness modules from contrasted trajectories and integrates them; the proposal and promotion procedure remains fixed. |
+| 2026 | [SIFT](https://arxiv.org/abs/2609.19526) | ![Self-improvement][self-improvement-badge] | Searches self-edits to a coding agent using pairwise patch judgments before expensive task evaluation; the tree-search operator itself remains fixed. |
 | 2026 | [Dream-RSI](https://github.com/zhengkid/Dream-RSI) | ![Self-improvement][self-improvement-badge] | Replays recorded search trees as simulated worlds to improve the exploration policy used in later research runs; the project preprint is public, with implementation code still announced as forthcoming. |
 
 ## Components of self-improvement
@@ -203,6 +205,9 @@ Data evolution belongs here when generated experience is **persisted, selected o
 - ![Self-improvement][self-improvement-badge] [SkillLift](https://arxiv.org/abs/2609.15396) (2026) - Alternates cheap rubric-guided skill revision with sparse oracle rollouts that realign the learned rubric, reducing the evaluation cost of persistent skill evolution. [![Code][code-badge]](https://github.com/WalteR-MittY-pro/SkillLift "Code")
 - ![Self-improvement][self-improvement-badge] [EvoOntology](https://arxiv.org/abs/2609.15779) (2026) - Exposes a persistent ontology as an MCP server and accepts attribution-guided typed edits only after backbone-conditional paired evaluation. [![Code][code-badge]](https://github.com/ruc-datalab/EvoOntology "Code")
 - ![Self-improvement][self-improvement-badge] [ThinkFlow](https://arxiv.org/abs/2609.17010) (2026) - Continually refines probabilistic latent memory through self-supervised next-user-utterance prediction for label-free, multi-session personalization.
+- ![Self-improvement][self-improvement-badge] [EvoSkill-GUI](https://arxiv.org/abs/2609.17653) (2026) - Revises persistent, multi-file GUI skills from execution failures through an isolated critic and restricted edits; tests reuse across related tasks. [![Code][code-badge]](https://github.com/ZJU-REAL/EvoSkill-GUI "Code")
+- ![Self-improvement][self-improvement-badge] [SkillAA](https://arxiv.org/abs/2609.20455) (2026) - Attributes failures to specific skill-graph objects and admits local repairs through targeted validation and rollback with a frozen base model. [![Code][code-badge]](https://github.com/Ziqiao-Shang/SkillAA "Code")
+- ![Self-improvement][self-improvement-badge] [FINSKILLOPS](https://arxiv.org/abs/2609.19680) (2026) - Promotes scoped financial-QA skill patches only after targeted validation, protected-case regression checks, and negative controls; the update procedure stays fixed.
 
 ## Automated AI research
 
@@ -231,6 +236,7 @@ Coding is a particularly important test bed because repositories, tests, and iss
 - ![Self-improvement][self-improvement-badge] [AgentDevel](https://arxiv.org/abs/2601.04620) (2026) - Frames agent evolution as release engineering with versioned candidates and validation.
 - ![Self-improvement][self-improvement-badge] [Adaptive Self-Improvement for ML Library Development](https://arxiv.org/abs/2502.02534) (ICML 2025) - Uses environment feedback to improve an agent working on machine-learning libraries. [![Code][code-badge]](https://github.com/zhang677/PCL-lite "Code")
 - ![Enabler][enabler-badge] [LLMLOOP](https://ieeexplore.ieee.org/document/11185878) (ICSME 2025) - Iteratively improves generated code and tests through automated feedback. [![Code][code-badge]](https://github.com/ravinravi03/LLMLOOP "Code")
+- ![Enabler][enabler-badge] [SoL-Pi](https://arxiv.org/abs/2609.20519) (2026) - Auto-research selects transferable harness-efficiency mechanisms across environments; the released Pi extension packages four fixed mechanisms rather than running a live self-improvement loop. [![Code][code-badge]](https://github.com/NVlabs/SoL-Pi "Code") · [![Project][project-badge]](https://nvlabs.github.io/SoL-Pi/ "Project")
 
 ## Evaluation and benchmarks
 
@@ -258,6 +264,7 @@ A downstream task score is not by itself an RSI evaluation. Direct benchmarks be
 - [FinEvolveBench](https://arxiv.org/abs/2606.06960) (2026) - Tests whether agents turn low-repetition financial tasks and delayed, noisy outcomes into reusable experience. [![Code and data preview][code-data-badge]](https://github.com/DavidDeng01/FinEvolveBench "Code and data preview"); the repository schedules the complete dataset for September 2026.
 - [FinEvo-Bench](https://arxiv.org/abs/2608.06144) (2026) - Uses paired non-evolving controls and shuffled longitudinal streams to measure experience gains and compliance in professional financial workflows. Code not linked by the paper.
 - [When Validation Stops Learning](https://arxiv.org/abs/2609.10873) (2026) - Audits update-admission gates by measuring both error control and retained learning opportunities, showing that an overly conservative gate can prevent every candidate update from being adopted.
+- [Bad Genius / CHASE](https://arxiv.org/abs/2609.18366) (2026) - Challenges harness revisions with validity-preserving benchmark-protocol counterfactuals to detect gains from benchmark-wide shortcuts before promotion.
 
 ### AI research and iterative optimization environments
 
@@ -277,6 +284,7 @@ A downstream task score is not by itself an RSI evaluation. Direct benchmarks be
 - [NatureBench](https://arxiv.org/abs/2606.24530) - Scientific ML tasks derived from Nature-family papers with held-out tests and an information firewall. [![Code][code-badge]](https://github.com/FrontisAI/NatureBench "Code")
 - [METR: Measuring AI Ability to Complete Long Tasks](https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/) - Time-horizon methodology relevant to autonomous AI R&D.
 - [Harness or Model?](https://arxiv.org/abs/2609.11987) (2026) - Uses paired same-model comparisons on a private, contamination-controlled coding suite to isolate harness effects and finds no stable average winner across the tested harnesses.
+- [An Empirical Study of Harness Design for Coding Agents](https://arxiv.org/abs/2609.20804) (2026) - Compares planning, action space, and context management in 176 matched settings across four models on SWE-bench Verified and Terminal-Bench 2.1; a component-level study, not an RSI benchmark.
 
 ### Common downstream taskbeds
 
@@ -374,6 +382,7 @@ These systems can alter multiple parts of an agent or its harness, not just the 
 | [Ecdysis](https://github.com/cuiyu-ai/Ecdysis) | Runtime prompts, tools, and control logic | Cross-task failure aggregation + validation | [![Paper][paper-badge]](https://arxiv.org/abs/2609.11677 "Paper") |
 | [WHALE](https://github.com/krafton-ai/WHALE) | Harness and model weights | Alternating harness search and weight-update evaluation | [![Paper][paper-badge]](https://arxiv.org/abs/2609.00196 "Paper") |
 | [ScienceBuddy](https://github.com/Gen-Verse/ScienceBuddy) | Scientific-agent harness and model policy | Alternating harness evaluation and model RL | [![Paper][paper-badge]](https://arxiv.org/abs/2609.17523 "Paper") |
+| [ModularRSI](https://github.com/IQuestLab/ModularRSI) | Agent loop, tools, observations, context, and completion detection | Restricted module edits + benchmark-disjoint evolution tasks + held-out transfer | [![Paper][paper-badge]](https://arxiv.org/abs/2609.14857 "Paper") · [![Dataset][dataset-badge]](https://huggingface.co/datasets/IQuestLab/ModularRSI_2000_Instances "Evolution tasks") |
 | [HarnessEvolve](https://arxiv.org/abs/2609.00829) | Executable harness components | Reference-trajectory alignment + held-out gate | Paper; code not linked at publication |
 | [StarHarness](https://github.com/ServiceNow/StarHarness) | Enterprise-agent harness | Hidden selection + held-out transfer | [![Paper][paper-badge]](https://arxiv.org/abs/2608.24804 "Paper"); code announced |
 | [AutoSaddler](https://arxiv.org/abs/2608.23041) | Prompts, tools, and control logic | Batch failure diagnosis + validation-based selection | [![Project][project-badge]](https://aka.ms/AutoSaddler-website "Project and code") |
@@ -445,6 +454,8 @@ These projects evolve a narrower persistent layer. Entries with **Memory only** 
 | [SkillLift](https://github.com/WalteR-MittY-pro/SkillLift) | Reusable procedural skills and learned rubric | Sparse oracle alignment + rubric-guided search | [![Paper][paper-badge]](https://arxiv.org/abs/2609.15396 "Paper") |
 | [EvoOntology](https://github.com/ruc-datalab/EvoOntology) | MCP-served schema, content, and tool ontology | Attribution-guided edits + paired evaluation | [![Paper][paper-badge]](https://arxiv.org/abs/2609.15779 "Paper") |
 | [ThinkFlow](https://arxiv.org/abs/2609.17010) | Probabilistic latent user memory | Self-supervised next-utterance prediction | Paper; code not linked at publication |
+| [EvoSkill-GUI](https://github.com/ZJU-REAL/EvoSkill-GUI) | Multi-file GUI skills, including plans and recovery rules | Isolated failure critique + restricted edits + downstream task evaluation | [![Paper][paper-badge]](https://arxiv.org/abs/2609.17653 "Paper") |
+| [SkillAA](https://github.com/Ziqiao-Shang/SkillAA) | Structured skill graph | Attribution-guided local edits + Local/Big Gates + rollback | [![Paper][paper-badge]](https://arxiv.org/abs/2609.20455 "Paper") |
 
 ### Research and domain optimization harnesses
 
@@ -496,6 +507,7 @@ Primary technical posts are included when they document an implemented system, e
 - [![Blog][blog-badge]](https://www.anthropic.com/engineering/harness-design-long-running-apps "Blog") **Harness design for long-running application development** (Anthropic, 2026) - Studies planner–generator–evaluator architecture, rubric tuning, ablations, and the cost–quality tradeoff of long-running application-development harnesses.
 - [![Blog][blog-badge]](https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/ "Blog") **AlphaEvolve: A Gemini-powered coding agent for designing advanced algorithms** (Google DeepMind, 2025) - Explains the program database, automated evaluators, and evolutionary selection loop behind AlphaEvolve.
 - [![Blog][blog-badge]](https://rsi-exam.ai/blog.html "Technical report") **RSI-Exam: Benchmarking Recursive Self-Improvement through Executable Research** (RSI-Exam Team, 2026) - Documents task construction, hidden-set replay, scoring, resource accounting, trajectories, and limitations for the benchmark's 88-task release.
+- [![Blog][blog-badge]](https://nvlabs.github.io/SoL-Pi/ "Technical report") **SoL-Pi: Recursively Scaling Auto-Research Loops for Efficient Agent Harness** (NVIDIA, 2026) - Explains the auto-research process and the four harness-efficiency mechanisms packaged in the static Pi extension.
 
 ## Workshops and related collections
 
