@@ -368,6 +368,7 @@ These systems can alter multiple parts of an agent or its harness, not just the 
 
 | Project | Persistent surface | Gate | Evidence |
 | --- | --- | --- | --- |
+| [Gear](https://github.com/rsi-gear/gear) ![Self-improvement][self-improvement-badge] | Prompts, tools, skills, workflows, and context management | Benchmark evaluation + candidate selection + versioned snapshots | [Five-round harness experiment](https://github.com/rsi-gear/gear/blob/main/docs/guide/en/example-harness.md); public tasks reused for optimization |
 | [Penguin Harness](https://github.com/Prism-Shadow/penguin-harness) | Prompts, skills, runtime configuration | Frozen eval + keep/revert | Benchmarks, traces, versioned snapshots |
 | [Ouroboros](https://github.com/razzant/ouroboros) | Core code, tools, prompts, context assembly, dependencies | Separate-agent review + frozen benchmark snapshots | [![Paper][paper-badge]](https://arxiv.org/abs/2608.08311 "Paper") |
 | [Darwin Gödel Machine](https://github.com/jennyzzt/dgm) | Coding-agent implementation | Frozen eval + archive | [![Paper][paper-badge]](https://arxiv.org/abs/2505.22954 "Paper") |
