@@ -455,6 +455,7 @@ These systems can alter multiple parts of an agent or its harness, not just the 
 | [A-Evolve](https://github.com/A-EVO-Lab/a-evolve) | Agent programs and evolutionary strategy configuration | Pluggable evaluators + archive | [![Paper][paper-badge]](https://arxiv.org/abs/2602.00359 "Paper") |
 | [Exo](https://github.com/exoharness/exo) | Prompts, memory, tools, policy, harness code | Immutable event history; experimental | Recursive harness runtime |
 | [Yoyo Evolve](https://github.com/yologdev/yoyo-evolve) | Its own Rust source | Tests + scheduled promotion | Public GitHub evolution history |
+| [Harness-Zero](https://github.com/metaevo-ai/harness-zero) | Training-stage tools, middleware, skills, and memory; deployed model weights | Three-round failure-driven harness evaluation + disjoint held-out deployment tests | [![Paper][paper-badge]](https://arxiv.org/abs/2609.24974 "Paper") |
 
 ### Prompt, skill, memory, and context evolution
 
@@ -500,6 +501,7 @@ These projects evolve a narrower persistent layer. Entries with **Memory only** 
 | [EvoSkill-GUI](https://github.com/ZJU-REAL/EvoSkill-GUI) | Multi-file GUI skills, including plans and recovery rules | Isolated failure critique + restricted edits + downstream task evaluation | [![Paper][paper-badge]](https://arxiv.org/abs/2609.17653 "Paper") |
 | [SkillAA](https://github.com/Ziqiao-Shang/SkillAA) | Structured skill graph | Attribution-guided local edits + Local/Big Gates + rollback | [![Paper][paper-badge]](https://arxiv.org/abs/2609.20455 "Paper") |
 | [GraphSkillEvo](https://github.com/ruisun7/GraphSkillEvo) | Graph-structured procedural skills | Population-based mutation and crossover + unseen validation splits | [![Paper][paper-badge]](https://arxiv.org/abs/2609.21749 "Paper") |
+| [Meta Context Engineering](https://github.com/metaevo-ai/meta-context-engineering) | Context-engineering skill folders and context functions (files and code) | Validation score + best-so-far keep/revert | [![Paper][paper-badge]](https://arxiv.org/abs/2601.21557 "Paper") |
 
 ### Research and domain optimization harnesses
 
