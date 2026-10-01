@@ -11,7 +11,7 @@
 
 </div>
 
-_Last reviewed: 2026-09-29._
+_Last reviewed: 2026-10-01._
 
 > [!IMPORTANT]
 > **RSI is stronger than ordinary iteration.** This list distinguishes systems that improve a persistent part of themselves from systems that merely revise one answer. A recursive system must also improve, or repeatedly reuse, the mechanism that produces later improvements. Most current systems are bounded or partial RSI—not open-ended intelligence explosions.
@@ -101,6 +101,8 @@ The unit of analysis is the **deployed agent system**, not only its neural weigh
 - [Generalized Agent Iteration](https://arxiv.org/abs/2609.13406) (2026) - Places iterative policy improvement and RSI in one formal framework using two axes: whether the improving mechanism is inside the agent and whether evaluation remains externally grounded.
 - [The Economics of Recursive Self-Improvement](https://arxiv.org/abs/2609.15802) (2026) - Models feedback between AI capabilities and AI R&D with coupled elasticities, separates narrow benchmark gains from broad capability gains, and identifies measurements needed to test whether self-sustaining acceleration is occurring.
 - [Audit the Scaffold, Not the Checkpoint](https://arxiv.org/abs/2609.34924) (2026) - Proposes a stationarity dichotomy: fixed reachable edit sets imply diminishing returns, while changes to tools, verifiers, or decomposition expand the reachable improvement class even with frozen model weights.
+- [Harness Evolution as Learning: Approximation, Generalization, and Optimization Limits of Self-Improving Personal Agents](https://arxiv.org/abs/2609.36892) (2026) - Decomposes harness-evolution error into approximation, generalization, and optimization terms, then tests how architecture, model scale, and search algorithms affect each limit. [![Code][code-badge]](https://github.com/ZyGan1999/self-evolving-harness-as-learning "Code")
+- [How Much of a Harness Does a Strong Agent Need for Autonomous ML Engineering?](https://arxiv.org/abs/2609.40303) (2026) - Uses matched backbones and time budgets to show that elaborate MLE harnesses do not consistently beat a minimal coding agent, isolating model capability as the primary driver in the tested settings.
 
 ### Pre-LLM stepping stones
 
@@ -148,6 +150,11 @@ The unit of analysis is the **deployed agent system**, not only its neural weigh
 | 2026 | [LiteEvo](https://arxiv.org/abs/2609.33146) | ![Self-improvement][self-improvement-badge] | Mines trajectories for reusable harness components, curates a versioned library, and composes later harnesses from a neutral seed with held-out transfer checks. |
 | 2026 | [Vestrum](https://arxiv.org/abs/2609.33822) | ![Self-improvement][self-improvement-badge] | Turns recurring trace failures into scoped changes to verification, retrieval, decomposition, memory, and knowledge synthesis, then tests the frozen result on held-out tasks. |
 | 2026 | [RoboFoundry](https://arxiv.org/abs/2609.32862) · [![Project][project-badge]](https://jingsongliang.com/robofoundry/ "Project") | ![Self-improvement][self-improvement-badge] | Evolves context, file-system memory, hierarchical skills, and recovery procedures through an act–reflect–repair–promote loop with held-out checks across robot embodiments. |
+| 2026 | [Self-Evolving Harness on Multiple Tasks with the Agent as Its Own Optimizer](https://arxiv.org/abs/2609.38372) · [![Code][code-badge]](https://github.com/qzzqzzb/Self-Harness "Code") | ![Self-improvement][self-improvement-badge] | The same frozen model alternates between solving tasks and editing the persistent harness from its run records; the surrounding train-and-promote procedure stays fixed. |
+| 2026 | [Mixture of Self-Improving Branches for Agent Harness Optimization](https://arxiv.org/abs/2609.37834) | ![RSI][rsi-badge] | Branches co-evolve harnesses and the proposal policies that generate later edits, while a learned router combines specialized descendants; included as an RSI candidate because part of the improvement policy is inside the evolving state. |
+| 2026 | [MILO: Automated Harness Discovery via Orchestrated Multi-Agent Evolution](https://arxiv.org/abs/2609.38349) | ![RSI][rsi-badge] | Co-evolves full harnesses and their discovery strategy by adapting mutator assignments, grafting, speciation, and curriculum from lineage evidence; included as an RSI candidate because later search is changed by the evolving strategy. |
+| 2026 | [Video-RSI](https://arxiv.org/abs/2609.37950) · [![Code][code-badge]](https://github.com/bingjunluo/Video-RSI "Code") | ![Self-improvement][self-improvement-badge] | Revises a persistent video-evidence acquisition harness from investigation traces and retains variants against both answer quality and visual-compute cost. |
+| 2026 | [DynaHarness](https://arxiv.org/abs/2609.40306) · [![Code][code-badge]](https://github.com/PhyAgentOS/PhyAgentOS-core "Code") | ![Self-improvement][self-improvement-badge] | Attributes embodied-agent failures to reusable capabilities or execution mechanisms, repairs the responsible harness components, and admits updates through paired regression checks. |
 
 ## Components of self-improvement
 
@@ -233,7 +240,9 @@ Data evolution belongs here when generated experience is **persisted, selected o
 - ![Self-improvement][self-improvement-badge] [RSI-Router](https://arxiv.org/abs/2609.34712) (2026) - Co-evolves subtask definitions, model-routing strategies, model-specific skills, and a Pareto archive to improve the performance–cost frontier across later tasks.
 - ![Self-improvement][self-improvement-badge] [ContextEvo](https://arxiv.org/abs/2609.34649) (2026) - Reconstructs model-visible context at key decisions, attributes long-horizon failures to context policy, and persists targeted policy updates in a Pi-based harness.
 - ![Self-improvement][self-improvement-badge] [GenMem](https://arxiv.org/abs/2609.34633) (2026) - Learns stable symbolic addresses for evolving memory payloads and jointly trains retrieval and memory-revision agents from process and outcome rewards.
-- ![Self-improvement][self-improvement-badge] [R² Flow](https://arxiv.org/abs/2609.33867) (2026) - Alternates flow-based procedure learning, independent verification, and versioned skill-library edits whose committed changes reshape the next policy's orchestration graph; code is announced but not yet released.
+- ![Self-improvement][self-improvement-badge] [R² Flow](https://arxiv.org/abs/2609.33867) (2026) - Alternates flow-based procedure learning, independent verification, and versioned skill-library edits whose committed changes reshape the next policy's orchestration graph. [![Code][code-badge]](https://github.com/beita6969/r2flow "Code")
+- ![Self-improvement][self-improvement-badge] [Learning Meta-Skills for Agent Harness Design in Test-Time AI4AI](https://arxiv.org/abs/2609.38143) (2026) - Distills target-task feedback into a persistent bank of reusable harness-design meta-skills, then freezes that bank before constructing harnesses for unseen tasks. [![Code][code-badge]](https://github.com/qiancheng-apodex/MetaSkill-AI4AI "Code")
+- ![Self-improvement][self-improvement-badge] [EvoSteer](https://arxiv.org/abs/2609.38661) (2026) - Evolves a graph of reusable orchestration skills online and admits new nodes only after paired sequential evaluation against the current graph. [![Code][code-badge]](https://github.com/beita6969/evosteer "Code")
 
 ## Automated AI research
 
@@ -252,6 +261,9 @@ Automating AI R&D can close an important part of the RSI loop, but these systems
 - ![Enabler][enabler-badge] [Agora](https://arxiv.org/abs/2609.18094) (2026) - Uses an append-only Git DAG as shared, reproducible memory for autonomous research workers, with evidence- and diversity-aware navigation; its initial multi-agent run is a demonstration rather than a controlled causal comparison. [![Code][code-badge]](https://github.com/yifanzhang-pro/Agora "Code")
 - ![RSI][rsi-badge] [AIDE²: Recursive self-improvement of AI research agents](https://arxiv.org/abs/2609.26457) (2026) - Runs an autonomous research agent against its own implementation, promotes accepted rewrites across seven generations, and tests transfer to four held-out research benchmarks.
 - ![Self-improvement][self-improvement-badge] [RSI-Master](https://arxiv.org/abs/2609.35561) (2026) - Uses a restricted Experiment OS and a dynamically growing Worker–Reviewer research DAG to explore post-training strategies while preserving traceable evidence and avoiding reward hacking; the orchestration procedure remains fixed.
+- ![Self-improvement][self-improvement-badge] [Learning from Research: Toward Lifelong Agent Harness Evolution (ScholarEvolve)](https://arxiv.org/abs/2609.40169) (2026) - Converts new research papers and task outcomes into modular evolution directions that persist across later AppWorld and Tau2 harness searches; the outer search procedure remains fixed.
+- ![Self-improvement][self-improvement-badge] [Experimental Experience Modeling for Autonomous Research](https://arxiv.org/abs/2609.39392) (2026) - Distills experiment trajectories into a continually growing experience library and runs low-cost pilot experiments when retrieval is insufficient.
+- ![Enabler][enabler-badge] [RankEvolve: A Reliable Multi-Agent Auto-Research Harness for Evolving Ranking Models](https://arxiv.org/abs/2609.39551) (2026) - Uses a state-machine research loop and a meta-harness to coordinate coding agents, preserve experiment evidence, and iteratively improve an external ranking model rather than the improver itself.
 
 ## Software-engineering self-improvement
 
@@ -298,6 +310,7 @@ A downstream task score is not by itself an RSI evaluation. Direct benchmarks be
 - [EvoPathBench: Beyond Endpoint Performance](https://arxiv.org/abs/2609.24663) (2026) - Freezes artifacts at successive evolution checkpoints and measures capability emergence, generalization, retention, and rule adaptation on held-out episodes, revealing that endpoint gains often weaken out of distribution. [![Code][code-badge]](https://github.com/HQ-Lin/EvoPathBench "Code")
 - [Automatic Harness Evolution for Hardware Design Verification](https://arxiv.org/abs/2609.28908) (2026) - Evaluates whether gains discovered by evolved verification harnesses consolidate under broader replay; more attempts and coverage do not reliably translate into more correct solutions.
 - [Which Self-Improvements Should We Trust? (REUSE)](https://arxiv.org/abs/2609.33180) (2026) - Controls adaptive overfitting when an improvement loop repeatedly reuses one evaluation set, providing simultaneous statistical guarantees for every promoted modification.
+- [SAGE: A Statistical Acceptance Gate for Self-Evolving Agents](https://arxiv.org/abs/2609.36043) (2026) - Uses paired per-item outcomes, asymmetric regression penalties, and a one-sided paired test to promote an update only when its gain over the incumbent is statistically reliable.
 
 ### AI research and iterative optimization environments
 
@@ -339,7 +352,7 @@ These do not measure improvement rates directly. They test whether increasingly 
 - [Reward Hacking Benchmark](https://arxiv.org/abs/2605.02964) - Multi-step tool tasks with shortcut and evaluator-tampering opportunities, including harder chained variants.
 - [RepliBench](https://arxiv.org/abs/2504.18565) - Measures resource acquisition, model-weight exfiltration, deployment, and persistence as components of autonomous replication risk.
 - [Persistent Memory Poisoning Attack](https://arxiv.org/abs/2609.13889) (2026) - Tests whether malicious instructions from external sources can enter an agent's persistent memory and trigger cross-session actions after the original content is gone.
-- [SEABench](https://arxiv.org/abs/2609.35596) (2026) - Uses 48 longitudinal task sequences and paired non-evolving controls to measure endogenous misalignment introduced by persistent prompt, memory, tool, and skill updates.
+- [SEABench](https://arxiv.org/abs/2609.35596) (2026) - Uses 48 longitudinal task sequences and paired non-evolving controls to measure endogenous misalignment introduced by persistent prompt, memory, tool, and skill updates. [![Code][code-badge]](https://github.com/SEABench-Endogenous-Misalignment/SEABench "Code")
 
 ### What a convincing RSI evaluation should report
 
@@ -371,6 +384,9 @@ These do not measure improvement rates directly. They test whether increasingly 
 - ![Enabler][enabler-badge] [LLM Agents Can Easily Tamper With Their Own Traces](https://arxiv.org/abs/2609.30266) (2026) - Tests popular local coding harnesses and shows that trace deletion is broadly available and can emerge under performance pressure, motivating logging outside the agent's editable environment.
 - ![Enabler][enabler-badge] [Compositional Safety Failures in Harness Evolution](https://arxiv.org/abs/2609.33123) (2026) - Shows that individually safe component updates can interact to create pairwise and irreducible three-way failures, then uses a typed hypergraph to monitor only affected interaction neighborhoods.
 - ![Enabler][enabler-badge] [When Better Gets Worse: Improvement Fidelity](https://arxiv.org/abs/2609.32677) (2026) - Formalizes when proxy-ranked policy updates reverse after deployment changes the world and allocates scarce high-fidelity evaluation to replacement decisions most likely to incur regret.
+- ![Self-improvement][self-improvement-badge] [SafeCoEvo](https://arxiv.org/abs/2609.36580) (2026) - Co-evolves explicit safety knowledge in the harness with a parametric guard, feeding failures from each surface into later updates while keeping the outer co-evolution protocol fixed. [![Code][code-badge]](https://github.com/SII-YUCHENG2002/SafeCoEvo "Code")
+- ![Self-improvement][self-improvement-badge] [HARDE](https://arxiv.org/abs/2609.38291) (2026) - Iteratively optimizes risk triggers, monitoring, and feedback using joint safety–utility evidence across three attack benchmarks; the optimizer remains outside the editable harness. [![Code][code-badge]](https://github.com/Liuz233/HARDE "Code")
+- ![Self-improvement][self-improvement-badge] [FailBank: Learning from Runtime Feedback for Safe Self-Improving Agents](https://arxiv.org/abs/2609.39820) (2026) - Admits runtime failures into a guarded replay bank and uses them for constrained policy updates while retaining quiet, non-failure anchors against regression.
 
 - [The Basic AI Drives](https://selfawaresystems.com/wp-content/uploads/2008/01/ai_drives_final.pdf) (2008) - Why self-preservation, resource acquisition, and self-improvement may emerge instrumentally.
 - [Risks from Learned Optimization in Advanced Machine Learning Systems](https://arxiv.org/abs/1906.01820) (2019) - Mesa-optimization and objectives learned inside an optimizing system.
@@ -456,6 +472,11 @@ These systems can alter multiple parts of an agent or its harness, not just the 
 | [Exo](https://github.com/exoharness/exo) | Prompts, memory, tools, policy, harness code | Immutable event history; experimental | Recursive harness runtime |
 | [Yoyo Evolve](https://github.com/yologdev/yoyo-evolve) | Its own Rust source | Tests + scheduled promotion | Public GitHub evolution history |
 | [Harness-Zero](https://github.com/metaevo-ai/harness-zero) | Training-stage tools, middleware, skills, and memory; deployed model weights | Three-round failure-driven harness evaluation + disjoint held-out deployment tests | [![Paper][paper-badge]](https://arxiv.org/abs/2609.24974 "Paper") |
+| [Self-Evolving Harness (multi-task)](https://github.com/qzzqzzb/Self-Harness) | Full executable harness shared by solver and optimizer roles | Multi-task evolution split + held-out and out-of-distribution evaluation | [![Paper][paper-badge]](https://arxiv.org/abs/2609.38372 "Paper") |
+| [Video-RSI](https://github.com/bingjunluo/Video-RSI) | Video investigation and evidence-acquisition harness | Answer accuracy + retained visual-compute cost | [![Paper][paper-badge]](https://arxiv.org/abs/2609.37950 "Paper") |
+| [DynaHarness](https://github.com/PhyAgentOS/PhyAgentOS-core) | Physical-agent capabilities and execution mechanisms | Failure attribution + paired regression checks | [![Paper][paper-badge]](https://arxiv.org/abs/2609.40306 "Paper") |
+| [SafeCoEvo](https://github.com/SII-YUCHENG2002/SafeCoEvo) | Safety knowledge harness and parametric guard | Safety–utility co-evolution evaluation | [![Paper][paper-badge]](https://arxiv.org/abs/2609.36580 "Paper") |
+| [HARDE](https://github.com/Liuz233/HARDE) | Risk trigger, monitor, and corrective feedback harness | Joint safety–utility evaluation across attack suites | [![Paper][paper-badge]](https://arxiv.org/abs/2609.38291 "Paper") |
 
 ### Prompt, skill, memory, and context evolution
 
@@ -502,6 +523,8 @@ These projects evolve a narrower persistent layer. Entries with **Memory only** 
 | [SkillAA](https://github.com/Ziqiao-Shang/SkillAA) | Structured skill graph | Attribution-guided local edits + Local/Big Gates + rollback | [![Paper][paper-badge]](https://arxiv.org/abs/2609.20455 "Paper") |
 | [GraphSkillEvo](https://github.com/ruisun7/GraphSkillEvo) | Graph-structured procedural skills | Population-based mutation and crossover + unseen validation splits | [![Paper][paper-badge]](https://arxiv.org/abs/2609.21749 "Paper") |
 | [Meta Context Engineering](https://github.com/metaevo-ai/meta-context-engineering) | Context-engineering skill folders and context functions (files and code) | Validation score + best-so-far keep/revert | [![Paper][paper-badge]](https://arxiv.org/abs/2601.21557 "Paper") |
+| [MetaSkill-AI4AI](https://github.com/qiancheng-apodex/MetaSkill-AI4AI) | Reusable harness-design meta-skills | Target-task feedback + frozen-bank transfer to unseen tasks | [![Paper][paper-badge]](https://arxiv.org/abs/2609.38143 "Paper") |
+| [EvoSteer](https://github.com/beita6969/evosteer) | Graph of reusable orchestration skills | Paired sequential admission test | [![Paper][paper-badge]](https://arxiv.org/abs/2609.38661 "Paper") |
 
 ### Research and domain optimization harnesses
 
@@ -522,6 +545,8 @@ These run closed experimentation loops, but usually improve a target program, sc
 | [AlgoEvo](https://arxiv.org/abs/2609.15820) | Algorithms, task search trees, and cross-task design skills | Executable evaluation + experience consolidation |
 | [Dream-RSI](https://github.com/zhengkid/Dream-RSI) | Research exploration policy | Replay in search-tree world models; code forthcoming |
 | [Agora](https://github.com/yifanzhang-pro/Agora) | Shared research claims, results, failures, and verification lineage | Immutable Git contributions + cross-account evidence scoring |
+| [ScholarEvolve](https://arxiv.org/abs/2609.40169) | Literature-guided harness evolution directions | AppWorld and Tau2 task feedback; code repository announced but empty at review |
+| [RankEvolve](https://arxiv.org/abs/2609.39551) | Ranking-model research code and experiment knowledge | Multi-agent state machine + repeated deployment evaluation |
 
 ### Autoresearch loop implementations
 
