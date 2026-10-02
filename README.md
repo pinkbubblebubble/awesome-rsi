@@ -243,6 +243,7 @@ Data evolution belongs here when generated experience is **persisted, selected o
 - ![Self-improvement][self-improvement-badge] [R² Flow](https://arxiv.org/abs/2609.33867) (2026) - Alternates flow-based procedure learning, independent verification, and versioned skill-library edits whose committed changes reshape the next policy's orchestration graph. [![Code][code-badge]](https://github.com/beita6969/r2flow "Code")
 - ![Self-improvement][self-improvement-badge] [Learning Meta-Skills for Agent Harness Design in Test-Time AI4AI](https://arxiv.org/abs/2609.38143) (2026) - Distills target-task feedback into a persistent bank of reusable harness-design meta-skills, then freezes that bank before constructing harnesses for unseen tasks. [![Code][code-badge]](https://github.com/qiancheng-apodex/MetaSkill-AI4AI "Code")
 - ![Self-improvement][self-improvement-badge] [EvoSteer](https://arxiv.org/abs/2609.38661) (2026) - Evolves a graph of reusable orchestration skills online and admits new nodes only after paired sequential evaluation against the current graph. [![Code][code-badge]](https://github.com/beita6969/evosteer "Code")
+- ![Self-improvement][self-improvement-badge] [AnchorGUI: Asymmetric Memory for Dual-Scale Learning in GUI Navigation](https://arxiv.org/abs/2609.15457) (ECCV 2026) - Turns unexpected GUI outcomes into visual evidence for immediate correction and reusable strategies that help agents avoid repeating mistakes across attempts.
 
 ## Automated AI research
 
