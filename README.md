@@ -198,6 +198,7 @@ Data evolution belongs here when generated experience is **persisted, selected o
 - ![Self-improvement][self-improvement-badge] [EvoAudio](https://arxiv.org/abs/2609.27389) (2026) - Repeatedly uses the current model to choose capability gaps, generate verifiable audio training data, update weights with reinforcement learning, and promote the validated checkpoint; the curriculum operator remains fixed.
 - ![Enabler][enabler-badge] [Env-Rethink](https://arxiv.org/abs/2609.29773) (2026) - Evolves collection maps, event logs, and virtual histories that generate better offline trajectories for later agent training; the changing object is the learning environment rather than the updater.
 - ![Self-improvement][self-improvement-badge] [COEVO](https://arxiv.org/abs/2609.33398) (2026) - Co-adapts model parameters from on-policy experience and contextual guidance from policy-state signals inside one feedback loop; the co-evolution algorithm remains fixed.
+- ![Self-improvement][self-improvement-badge] [ReSAIL: Mitigating Collapse in Iterative Agent Self-Distillation](https://arxiv.org/abs/2609.39306) (arXiv 2026) - Mitigates performance collapse in iterative agent self-distillation by learning selectively from deployment experience and preserving the student's ability to supervise the next cycle. [![Code][code-badge]](https://github.com/ShengjieJin/ReSAIL "Code")
 
 ### Prompts, memory, tools, and skills
 
