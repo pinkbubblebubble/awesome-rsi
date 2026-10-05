@@ -11,7 +11,7 @@
 
 </div>
 
-_Last reviewed: 2026-10-01._
+_Last reviewed: 2026-10-04._
 
 > [!IMPORTANT]
 > **RSI is stronger than ordinary iteration.** This list distinguishes systems that improve a persistent part of themselves from systems that merely revise one answer. A recursive system must also improve, or repeatedly reuse, the mechanism that produces later improvements. Most current systems are bounded or partial RSI—not open-ended intelligence explosions.
@@ -198,7 +198,7 @@ Data evolution belongs here when generated experience is **persisted, selected o
 - ![Self-improvement][self-improvement-badge] [EvoAudio](https://arxiv.org/abs/2609.27389) (2026) - Repeatedly uses the current model to choose capability gaps, generate verifiable audio training data, update weights with reinforcement learning, and promote the validated checkpoint; the curriculum operator remains fixed.
 - ![Enabler][enabler-badge] [Env-Rethink](https://arxiv.org/abs/2609.29773) (2026) - Evolves collection maps, event logs, and virtual histories that generate better offline trajectories for later agent training; the changing object is the learning environment rather than the updater.
 - ![Self-improvement][self-improvement-badge] [COEVO](https://arxiv.org/abs/2609.33398) (2026) - Co-adapts model parameters from on-policy experience and contextual guidance from policy-state signals inside one feedback loop; the co-evolution algorithm remains fixed.
-- ![Self-improvement][self-improvement-badge] [ReSAIL: Mitigating Collapse in Iterative Agent Self-Distillation](https://arxiv.org/abs/2609.39306) (arXiv 2026) - Mitigates performance collapse in iterative agent self-distillation by learning selectively from deployment experience and preserving the student's ability to supervise the next cycle. [![Code][code-badge]](https://github.com/ShengjieJin/ReSAIL "Code")
+- ![Self-improvement][self-improvement-badge] [ReSAIL: Mitigating Collapse in Iterative Agent Self-Distillation](https://arxiv.org/abs/2609.39306) (2026) - Selectively distills informative steps from deployment trajectories while retaining the privileged-information behavior used to supervise the next cycle; gains persist across three cycles, while the update procedure remains fixed. [![Code][code-badge]](https://github.com/ShengjieJin/ReSAIL "Code")
 
 ### Prompts, memory, tools, and skills
 
@@ -244,7 +244,7 @@ Data evolution belongs here when generated experience is **persisted, selected o
 - ![Self-improvement][self-improvement-badge] [R² Flow](https://arxiv.org/abs/2609.33867) (2026) - Alternates flow-based procedure learning, independent verification, and versioned skill-library edits whose committed changes reshape the next policy's orchestration graph. [![Code][code-badge]](https://github.com/beita6969/r2flow "Code")
 - ![Self-improvement][self-improvement-badge] [Learning Meta-Skills for Agent Harness Design in Test-Time AI4AI](https://arxiv.org/abs/2609.38143) (2026) - Distills target-task feedback into a persistent bank of reusable harness-design meta-skills, then freezes that bank before constructing harnesses for unseen tasks. [![Code][code-badge]](https://github.com/qiancheng-apodex/MetaSkill-AI4AI "Code")
 - ![Self-improvement][self-improvement-badge] [EvoSteer](https://arxiv.org/abs/2609.38661) (2026) - Evolves a graph of reusable orchestration skills online and admits new nodes only after paired sequential evaluation against the current graph. [![Code][code-badge]](https://github.com/beita6969/evosteer "Code")
-- ![Self-improvement][self-improvement-badge] [AnchorGUI: Asymmetric Memory for Dual-Scale Learning in GUI Navigation](https://arxiv.org/abs/2609.15457) (ECCV 2026) - Turns unexpected GUI outcomes into visual evidence for immediate correction and reusable strategies that help agents avoid repeating mistakes across attempts.
+- ![Self-improvement][self-improvement-badge] [AnchorGUI: Asymmetric Memory for Dual-Scale Learning in GUI Navigation](https://arxiv.org/abs/2609.15457) (ECCV 2026) - Preserves screenshots for unexpected GUI transitions and distills them into an iteratively updated experience bank reused across later attempts of the same task; the memory updater remains fixed.
 
 ## Automated AI research
 
