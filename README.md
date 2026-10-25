@@ -703,6 +703,7 @@ These run closed experimentation loops, but usually improve a target program, sc
 | [ScholarEvolve](https://arxiv.org/abs/2609.40169) | Literature-guided harness evolution directions | AppWorld and Tau2 task feedback; code repository announced but empty at review |
 | [RankEvolve](https://arxiv.org/abs/2609.39551) | Ranking-model research code and experiment knowledge | Multi-agent state machine + repeated deployment evaluation |
 | [DAGLoop](https://github.com/deng34567/DAGLoop) | ML methods and structured decision evidence | Dependency-aware ablations + executable evaluation; [![Paper][paper-badge]](https://arxiv.org/abs/2610.25089 "Paper") |
+| [AutoSR](https://github.com/AutoResearch-Factory/AutoSR) | Symbolic-regression equations and their research states | Fit error, computational probes, and independent review inside MCTS; [![Paper][paper-badge]](https://arxiv.org/abs/2608.16876 "Paper") |
 
 ### Autoresearch loop implementations
 
