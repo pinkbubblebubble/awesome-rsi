@@ -714,6 +714,7 @@ These projects evolve a narrower persistent layer. Entries with **Memory only** 
 | [GenericAgent](https://github.com/lsdefine/GenericAgent) | Executable skill tree | Task success; versioned | Minimal growing agent |
 | [OpenViking](https://github.com/volcengine/OpenViking) | Memory, knowledge, context, and skills | Versioned context + benchmarks | Context database, not a full agent loop |
 | [Hive](https://github.com/aden-hive/hive) | Reflexion memory, skills, and playbooks | Memory only | Production multi-agent harness |
+| [agent-qa](https://github.com/vostride/agent-qa) | QA facts, cautions, and replayable procedures (memidex) | Verified run evidence; optional replay/canary gates | ![Enabler][enabler-badge] · [Mechanism](https://vostride.com/docs/agent-qa/self-improvement); fixed updater, no longitudinal gain claimed |
 | [Voyager](https://github.com/MineDojo/Voyager) | Executable skill library | Environment feedback | [![Paper][paper-badge]](https://arxiv.org/abs/2305.16291 "Paper") |
 | [SEAL](https://github.com/Continual-Intelligence/SEAL) | Model weights through generated update data | Reward-guided training | [![Paper][paper-badge]](https://arxiv.org/abs/2506.10943 "Paper") |
 | [RewardHarness](https://github.com/TIGER-AI-Lab/RewardHarness) | Reward tools and skills | Preference accuracy + downstream RL | [![Paper][paper-badge]](https://arxiv.org/abs/2605.08703 "Paper") |
