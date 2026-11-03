@@ -422,6 +422,7 @@ Coding is a particularly important test bed because repositories, tests, and iss
 - ![Self-improvement][self-improvement-badge] [Adaptive Self-Improvement for ML Library Development](https://arxiv.org/abs/2502.02534) (ICML 2025) - Uses environment feedback to improve an agent working on machine-learning libraries. [![Code][code-badge]](https://github.com/zhang677/PCL-lite "Code")
 - ![Enabler][enabler-badge] [LLMLOOP](https://ieeexplore.ieee.org/document/11185878) (ICSME 2025) - Iteratively improves generated code and tests through automated feedback. [![Code][code-badge]](https://github.com/ravinravi03/LLMLOOP "Code")
 - ![Enabler][enabler-badge] [SoL-Pi](https://arxiv.org/abs/2609.20519) (2026) - Auto-research selects transferable harness-efficiency mechanisms across environments; the released Pi extension packages four fixed mechanisms rather than running a live self-improvement loop. [![Code][code-badge]](https://github.com/NVlabs/SoL-Pi "Code") · [![Project][project-badge]](https://nvlabs.github.io/SoL-Pi/ "Project")
+- ![Self-improvement][self-improvement-badge] [Learning from Repair Experience: Self-Evolving Agents for Automated Vulnerability Repair](https://arxiv.org/abs/2605.30105) (ICSE 2027) - Builds and updates a quality-scored experience bank from vulnerability-repair trajectories for reuse across repair episodes. [![Code][code-badge]](https://github.com/iSEngLab/Learn-from-Repair-Experience "Code")
 
 ## Evaluation and benchmarks
 
