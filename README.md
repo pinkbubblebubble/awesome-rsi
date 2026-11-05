@@ -11,7 +11,7 @@
 
 </div>
 
-_Last reviewed: 2026-10-31._
+_Last reviewed: 2026-11-05._
 
 > [!IMPORTANT]
 > **RSI is stronger than ordinary iteration.** This list distinguishes systems that improve a persistent part of themselves from systems that merely revise one answer. A recursive system must also improve, or repeatedly reuse, the mechanism that produces later improvements. Most current systems are bounded or partial RSI—not open-ended intelligence explosions.
@@ -247,6 +247,7 @@ The unit of analysis is the **deployed agent system**, not only its neural weigh
 | 2026 | [Try Before You Evolve: Ranking-Scored Trials for Recursive Self-Improvement of Recommender Systems](https://arxiv.org/abs/2610.39352) | ![Self-improvement][self-improvement-badge] | Revises recommender training recipes and screens candidates with short full-ranking trials before costly retraining; the diagnosis, trial, and selection mechanism remains fixed. |
 | 2026 | [KARMA: Training-Free Knowledge-Atomic Harness Evolution for Industrial Advertising Agents](https://arxiv.org/abs/2610.39884) | ![Self-improvement][self-improvement-badge] | Applies reversible atomic edits to six typed knowledge modules from verified trajectory contrasts and retains them behind a fixed regression gate, leaving weights and executable harness code frozen. |
 | 2026 | [MoLRSI: A Recursive Self-Improving AI Agent for Molecular Discovery](https://arxiv.org/abs/2610.39714) | ![RSI][rsi-badge] | Uses workflow outcomes and persistent cross-task memory to improve both molecular-search workflows and the strategy that develops later workflows, with wet-lab validation in two discovery settings. |
+| 2026 | [RSI-Env: An Open-Ended Environment for Recursive Self-Improvement of Agents](https://arxiv.org/abs/2611.01736) | ![RSI][rsi-badge] | Lets each accepted model-harness pair become the improver for the next round while retaining research state; a protected host controller handles services, versioning, and independent capability evaluation. |
 
 ## Components of self-improvement
 
@@ -462,6 +463,7 @@ A downstream task score is not by itself an RSI evaluation. Direct benchmarks be
 - [When Is Enough Enough in Self-Evolving LLM Systems?](https://arxiv.org/abs/2610.04756) (2026) - Adds an anytime-valid stopping detector and change-point artifact selection to reduce wasted evolution rounds and late overfitting without modifying the underlying updater.
 - [RSIGym](https://arxiv.org/abs/2610.10310) (2026) - Exposes data, harness, and joint-improvement environments through one evaluation service and reports a longitudinal RSI-Index across five benchmarks and six research models. [![Code][code-badge]](https://github.com/evolvent-ai/RSIGym "Code")
 - [RSI-Forge](https://arxiv.org/abs/2610.09426) (2026) - Provides 210 executable research environments across 18 fields and three successive attempts that inherit code and notes, enabling controlled measurement of iterative research improvement.
+- [RSI-Env](https://arxiv.org/abs/2611.01736) (2026) - Supports coordinated model and harness updates across inherited generations, with open-general, capability-directed, and benchmark-guided settings plus independent evaluation that exposes both gains and cross-capability regressions.
 - [SkillSandbox](https://arxiv.org/abs/2610.10088) (2026) - Synthesizes an executable scenario and with/without-skill verifier for each candidate skill, providing a gate for whether persistent skill changes cause measurable improvement.
 - [The Winner's Curse in LLM Self-Improvement Loops](https://arxiv.org/abs/2610.09239) (2026) - Quantifies selection noise and lock-in when noisy self-generated candidates are repeatedly promoted, motivating independent holdouts and larger selection sets.
 - [SEAR: Self-Evolving Agentic Robotics](https://arxiv.org/abs/2610.18792) (2026) - Separates retained learning from repeated attempts, budget, task familiarity, privileged simulator state, and luck across code-as-policy, live-agent, and auto-research modes. [![Code][code-badge]](https://github.com/Self-Evolving-Agentic-Robotics/SEAR "Code")
