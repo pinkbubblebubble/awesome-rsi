@@ -701,6 +701,7 @@ These projects evolve a narrower persistent layer. Entries with **Memory only** 
 
 | Project | Persistent surface | Gate | Evidence |
 | --- | --- | --- | --- |
+| [Sage](https://github.com/ZHangZHengEric/Sage) | Versioned Agent-package instructions and skills | Separate evaluator Sessions + fixed-validation selection; explicit user adoption | ![Self-improvement][self-improvement-badge] · [Mechanism](https://github.com/ZHangZHengEric/Sage/blob/77a198a205e04832c3d45cfab401455e56c179a4/docs/en/applications/RSI.md); fixed updater, no unseen-task gain claimed |
 | [SkillOpt](https://github.com/microsoft/SkillOpt) | Natural-language skills | Held-out validation + promotion | [![Paper][paper-badge]](https://arxiv.org/abs/2605.23904 "Paper") |
 | [SkillHone](https://github.com/Tencent/SkillHone) | Whole skill packages | Evaluation + Git-native decisions | [![Paper][paper-badge]](https://arxiv.org/abs/2606.08671 "Paper") |
 | [EvoSkill](https://github.com/sentient-agi/EvoSkill) | Skills and prompts synthesized from failures | Held-out evaluation | [![Paper][paper-badge]](https://arxiv.org/abs/2603.02766 "Paper") |
